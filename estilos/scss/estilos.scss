@@ -1,4 +1,4 @@
-@import 'variables'; // variables de colores, fuentes, bordes
+﻿@import 'variables'; // variables de colores, fuentes, bordes
 @import 'mixins'; // mixins reutilizables
 @import 'componentes'; // componentes base
 
@@ -23,15 +23,15 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 .pagina-heroe--fondo,
 .pagina-heroe--servicios,
 .pagina-heroe--como-funciona {
-  background-size: cover; // imagen cubre todo
+  background-size: cover;
   background-position: center; // centrada
 
   &::before {
-    content: ''; // pseudo-elemento vacío
-    position: absolute; // absoluto para cubrir
+    content: '';
+    position: absolute;
     inset: 0; // cubre todo
     background: rgba(0, 0, 0, 0.35); // overlay oscuro 35%
-    z-index: 0; // detrás del contenido
+    z-index: 0;
     pointer-events: none; // no intercepta clics
   }
 
@@ -62,9 +62,9 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 .heroe { padding: 0 0 80px; position: relative; overflow: hidden; // sin padding superior
   // título centrado con h1 grande
   .heroe-titulo { 
-    text-align: center; // centrado
-    padding-top: 32px; // espacio superior
-    margin-bottom: 48px; // separación inferior
+    text-align: center;
+    padding-top: 32px;
+    margin-bottom: 48px;
 
     h1 { font-size: 64px; margin-bottom: 0; } // h1 extra grande
   }
@@ -72,17 +72,17 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
   // carrusel de imágenes (marquee horizontal)
   .carrusel {
     overflow: hidden; // oculta desbordamiento
-    aspect-ratio: 3 / 1; // ratio 3:1
+    aspect-ratio: 3 / 1;
     .carrusel__track {
-      display: flex; // flex row
-      width: max-content; // ancho según contenido
-      height: 100%; // alto completo
-      animation: scroll-carrusel 20s linear infinite; // animación scroll infinita
+      display: flex;
+      width: max-content;
+      height: 100%;
+      animation: scroll-carrusel 20s linear infinite;
 
       img {
-        height: 100%; // alto completo
+        height: 100%;
         width: 25vw; // 25% del viewport
-        max-width: none; // sin límite
+        max-width: none;
         flex-shrink: 0; // no se encoge
       }
     }
@@ -91,30 +91,30 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
   // párrafo bajo el título
   .heroe-texto { 
     p { 
-      font-size: 20px; // texto grande
-      color: $color-tinta-suave; // gris
-      margin-bottom: 40px; // separación inferior
-      max-width: 900px; // ancho máximo
-      margin-left: auto; // centrado
-      margin-right: auto; // centrado
-      text-align: center; // centrado
+      font-size: 20px;
+      color: $color-tinta-suave;
+      margin-bottom: 40px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
     } 
   }
 
   // botones cta
   .grupo-botones { 
-    @include flex(row, center, center, 24px); // fila centrada con gap
-    flex-wrap: wrap; // wrap en móvil
-    margin-bottom: 64px; // separación inferior
+    @include flex(row, center, center, 24px);
+    flex-wrap: wrap;
+    margin-bottom: 64px;
   }
 
   // estadísticas (3 columnas)
   .estadisticas { 
-    display: grid; // grid
+    display: grid;
     grid-template-columns: repeat(3, 1fr); // 3 columnas iguales
-    gap: 32px; // espacio entre
-    max-width: 600px; // ancho máximo
-    margin: 0 auto; // centrado
+    gap: 32px;
+    max-width: 600px;
+    margin: 0 auto;
 
   }
 }
@@ -133,7 +133,7 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 @keyframes scroll-carrusel { from { transform: translateX(0); } to { transform: translateX(-50%); } } // animación carrusel
 
 // detalles de servicio (servicios.html)
-.detalle-servicio { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; padding: 80px 0; border-top: $borde-sutil; // grid 2 columnas con borde superior
+.detalle-servicio { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; padding: 80px 0; border-top: $borde-sutil;
   .num-servicio { font-size: 14px; letter-spacing: 2px; color: $color-arcilla; text-transform: uppercase; } // número de servicio uppercase
   h2 { font-size: 36px; color: $color-bosque-profundo; margin-top: 12px; margin-bottom: 24px; font-weight: 500; } // título semi-bold
   p { font-size: 16px; color: $color-tinta-suave; margin-bottom: 32px; } // descripción
@@ -146,22 +146,22 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 // mockup ui (servicios.html)
 .seccion-mockup {
   background: $color-seccion; // fondo crema
-  text-align: center; // centrado
+  text-align: center;
 
   .ventana-mockup {
-    max-width: 1000px; // ancho máximo
-    margin: 48px auto 0; // centrado con margen superior
+    max-width: 1000px;
+    margin: 48px auto 0;
     background: $color-crema; // fondo blanco
     border: $borde-tarjeta; // borde sutil
-    border-radius: 16px; // esquinas redondeadas
+    border-radius: 16px;
     overflow: hidden; // oculta desbordamiento
-    box-shadow: 0 20px 50px -10px rgba($color-bosque, .15); // sombra verde
+    box-shadow: 0 20px 50px -10px rgba($color-bosque, .15);
   }
 
   // barra superior del navegador
   .barra-navegador {
-    @include flex(row, center, flex-start, 8px); // fila con gap
-    padding: 12px 20px; // padding interno
+    @include flex(row, center, flex-start, 8px);
+    padding: 12px 20px;
     border-bottom: $borde-suave; // borde inferior sutil
 
     .punto { width: 10px; height: 10px; border-radius: $radio-circular; } // punto decorativo
@@ -173,18 +173,18 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 
   // contenido
   .cuerpo-mockup {
-    display: grid; // grid
+    display: grid;
     grid-template-columns: 1fr 2fr; // columna izquierda 1, derecha 2
-    gap: 24px; // espacio entre
-    padding: 32px; // padding interno
+    gap: 24px;
+    padding: 32px;
   }
 
   .tarjeta {
     text-align: left; // texto alineado izquierda
-    padding: 20px; // padding interno
+    padding: 20px;
     background: $color-crema; // fondo blanco
     border: $borde-suave; // borde sutil
-    border-radius: 12px; // esquinas redondeadas
+    border-radius: 12px;
 
     .mini-titulo { @include label-text; color: $color-arcilla; display: block; margin-bottom: 8px; } // etiqueta uppercase coral
     .valor { display: block; font-family: $fuente-serif; font-size: 28px; color: $color-bosque-profundo; font-weight: 400; } // valor numérico serif
@@ -192,18 +192,18 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
     // barra de glucosa
     .barra {
       height: 8px; // alto
-      margin-top: 12px; // separación superior
-      border-radius: 4px; // esquinas redondeadas
+      margin-top: 12px;
+      border-radius: 4px;
       background: $color-seccion; // fondo crema
       span { display: block; height: 100%; width: 70%; border-radius: 4px; background: $color-musgo; } // relleno al 70%
     }
 
     // lista del menú
     .menu li {
-      @include flex(row, center, space-between); // fila con espacio entre
-      padding: 6px 0; // padding vertical
-      font-size: 14px; // texto pequeño
-      color: $color-texto-tarjeta-suave; // gris
+      @include flex(row, center, space-between);
+      padding: 6px 0;
+      font-size: 14px;
+      color: $color-texto-tarjeta-suave;
       border-bottom: $borde-suave; // borde inferior
     }
     .menu .sin-borde { border-bottom: none; } // último item sin borde
@@ -211,7 +211,7 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 }
 
 // precios (servicios.html)
-.malla-precios { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 1000px; margin: 48px auto 0; // grid 2 columnas
+.malla-precios { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 1000px; margin: 48px auto 0;
   .tarjeta-precio { @include tarjeta-base(40px); position: relative; // tarjeta blanca con padding 40px
     &:hover { border-color: $color-arcilla; box-shadow: 0 20px 40px -10px rgba($color-arcilla,0.2); } // hover coral
     .insignia-precio { position: absolute; top: -16px; right: -16px; background: $color-arcilla; color: #fff; font-size: 12px; padding: 4px 12px; border-radius: $radio-pill; } // badge "popular" coral
@@ -272,6 +272,7 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 
 // paddings de sección puntuales
 .seccion--sin-top { padding-top: 0; } // sin padding superior
+.seccion-glucosa { background: $color-seccion; padding: 80px 0; }
 .seccion--compacta { padding: 0 0 40px; } // solo padding inferior
 .seccion--top-40 { padding-top: 40px; } // padding superior reducido
 
@@ -318,68 +319,68 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 // demo ia (demo.html)
 // heroe de demo (con h1 y p centrados)
 .demo-hero {
-  padding: 100px 0 40px; // padding superior amplio
-  text-align: center; // centrado
+  padding: 100px 0 40px;
+  text-align: center;
   h1 { margin-bottom: 16px; } // separación inferior
   p { font-size: 18px; color: $color-tinta-suave; max-width: 600px; margin: 0 auto; } // párrafo centrado
 }
 
 // formulario y resultado demo (caja blanca)
 .demo-contenedor, .demo-resultado {
-  max-width: 800px; // ancho máximo
-  margin: 0 auto; // centrado
+  max-width: 800px;
+  margin: 0 auto;
   background: $color-crema; // fondo blanco
-  border-radius: 24px; // esquinas redondeadas grandes
-  padding: 48px; // padding amplio
-  box-shadow: $sombra-suave; // sombra suave
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: $sombra-suave;
 }
 
 // texto auxiliar (selección múltiple)
 .demo-leyenda {
-  @include label-text; // uppercase pequeño
-  color: $color-texto-tarjeta-suave; // gris
-  margin-bottom: 16px; // separación inferior
+  @include label-text;
+  color: $color-texto-tarjeta-suave;
+  margin-bottom: 16px;
 }
 
 // fieldset de pregunta
 .demo-seccion {
-  border: none; // sin borde
-  margin-bottom: 24px; // separación inferior
-  padding-bottom: 24px; // padding inferior
+  border: none;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
 
 }
 
 // última fieldset sin borde inferior
 .demo-seccion--ultima {
-  border-bottom: none; // sin borde
-  margin-bottom: 24px; // separación inferior
+  border-bottom: none;
+  margin-bottom: 24px;
 }
 
 // título de pregunta con número
 .demo-titulo-seccion {
-  font-family: $fuente-serif; // serif
-  font-size: 20px; // tamaño
-  color: $color-texto-tarjeta; // oscuro
-  margin-bottom: 16px; // separación inferior
-  @include flex(row, center, flex-start, 12px); // fila con gap
+  font-family: $fuente-serif;
+  font-size: 20px;
+  color: $color-texto-tarjeta;
+  margin-bottom: 16px;
+  @include flex(row, center, flex-start, 12px);
 
   .num-seccion {
     @include circulo(32px); // círculo de 32px
     background: $color-bosque; // fondo verde
     color: #FFFFFF; // texto blanco
-    font-size: 14px; // tamaño
-    font-family: $fuente-sans; // sans
-    font-weight: 600; // semi-bold
+    font-size: 14px;
+    font-family: $fuente-sans;
+    font-weight: 600;
   }
 }
 
 // details vacío (demo)
 .demo-details {
-  max-width: 800px; // ancho máximo
-  margin: 32px auto 64px; // centrado con márgenes
+  max-width: 800px;
+  margin: 32px auto 64px;
 
   summary {
-    cursor: pointer; // puntero
+    cursor: pointer;
     list-style: none; // sin triángulo nativo
 
   }
@@ -387,26 +388,26 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 
 // conector entre formulario y resultado
 .demo-conector {
-  text-align: center; // centrado
+  text-align: center;
   margin: 48px 0; // márgenes verticales
 
   .conector-icono {
     @include circulo(64px); // círculo 64px
-    margin: 0 auto; // centrado
+    margin: 0 auto;
     background: $color-bosque; // fondo verde
-    color: #FFFFFF; // icono blanco
-    font-size: 24px; // tamaño icono
+    color: #FFFFFF;
+    font-size: 24px;
   }
   .conector-texto {
-    margin-top: 12px; // separación superior
-    @include label-text(14px); // uppercase 14px
-    color: $color-tinta-suave; // gris
-    font-weight: 600; // semi-bold
+    margin-top: 12px;
+    @include label-text(14px);
+    color: $color-tinta-suave;
+    font-weight: 600;
   }
   .conector-subtexto {
-    margin-top: 4px; // separación superior
-    font-size: 12px; // pequeño
-    color: $color-tinta-suave; // gris
+    margin-top: 4px;
+    font-size: 12px;
+    color: $color-tinta-suave;
     opacity: 0.6; // semitransparente
   }
 }
@@ -414,20 +415,20 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 // resultado de ia
 .demo-resultado {
   .resultado-header {
-    text-align: center; // centrado
-    margin-bottom: 32px; // separación inferior
-    padding-bottom: 24px; // padding inferior
+    text-align: center;
+    margin-bottom: 32px;
+    padding-bottom: 24px;
     border-bottom: 2px solid rgba($color-bosque, 0.08); // borde inferior sutil
 
     .ia-badge {
       @include flex(row, center, flex-start, 8px, inline-flex); // inline-flex con gap
-      padding: 6px 16px; // padding
+      padding: 6px 16px;
       background: rgba($color-bosque, 0.1); // fondo verde sutil
       border-radius: $radio-pill; // pill
-      @include label-text(11px); // uppercase 11px
-      font-weight: 700; // bold
-      color: $color-bosque; // verde
-      margin-bottom: 16px; // separación inferior
+      @include label-text(11px);
+      font-weight: 700;
+      color: $color-bosque;
+      margin-bottom: 16px;
 
       i { font-size: 14px; } // icono
     }
@@ -439,27 +440,27 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 // lista del menú generado
 .demo-menu {
   .demo-menu-item {
-    display: grid; // grid
+    display: grid;
     grid-template-columns: 56px 1fr auto; // icono, contenido, nutrición
-    gap: 16px; // espacio entre
-    align-items: center; // centrado vertical
-    padding: 16px 0; // padding vertical
+    gap: 16px;
+    align-items: center;
+    padding: 16px 0;
     border-bottom: 1px solid rgba($color-bosque, 0.06); // borde inferior sutil
 
     &.sin-borde { border-bottom: none; } // último sin borde
 
     .menu-icono {
-      width: 48px; height: 48px; border-radius: 12px; // icono cuadrado redondeado
+      width: 48px; height: 48px; border-radius: 12px;
       background: $color-seccion; // fondo crema
-      display: flex; align-items: center; justify-content: center; // flex centrado
-      font-size: 18px; color: $color-bosque; // icono verde
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; color: $color-bosque;
     }
     .menu-contenido {
       h4 { font-size: 15px; color: $color-texto-tarjeta; margin-bottom: 2px; font-weight: 600; } // nombre del alimento
       p { font-size: 13px; color: $color-texto-tarjeta-suave; } // descripción
     }
     .menu-nutricion {
-      text-align: right; // alineado derecha
+      text-align: right;
       .cho { font-size: 14px; font-weight: 700; color: $color-bosque; } // carbohidratos
       .ig { font-size: 11px; color: $color-texto-tarjeta-suave; } // índice glucémico
     }
@@ -468,18 +469,18 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 
 // totales nutricionales (3 columnas)
 .demo-nutricion-total {
-  display: grid; // grid
+  display: grid;
   grid-template-columns: repeat(3, 1fr); // 3 columnas iguales
-  gap: 16px; // espacio entre
-  margin-top: 24px; // separación superior
-  padding-top: 24px; // padding superior
+  gap: 16px;
+  margin-top: 24px;
+  padding-top: 24px;
   border-top: 2px solid rgba($color-bosque, 0.1); // borde superior
 
   .nutricion-item {
-    text-align: center; // centrado
-    padding: 16px; // padding
+    text-align: center;
+    padding: 16px;
     background: $color-seccion; // fondo crema
-    border-radius: 16px; // esquinas redondeadas
+    border-radius: 16px;
 
     .nutricion-num { font-family: $fuente-serif; font-size: 28px; color: $color-bosque; font-weight: 600; } // número
     .nutricion-label { @include label-text(11px); color: $color-texto-tarjeta-suave; margin-top: 4px; } // etiqueta
@@ -489,40 +490,40 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 // texto informativo en cta
 .cta-texto {
   opacity: 0.7; // semitransparente
-  margin-bottom: 32px; // separación inferior
-  font-size: 16px; // tamaño
+  margin-bottom: 32px;
+  font-size: 16px;
 }
 
 // cta claro (demo)
 .demo-cta-claro {
-  background: $color-seccion; // fondo crema
+  background: rgba($color-arcilla, 0.06); // fondo arcilla sutil
   color: $color-tinta; // texto oscuro
-  text-align: center; // centrado
+  text-align: center;
 
   h2 { color: $color-tinta; } // título oscuro
 
   .cta-texto {
-    color: $color-tinta-suave; // gris
+    color: $color-tinta-suave;
     opacity: 1; // opaco
   }
 }
 
 // nota informativa (demo)
 .demo-nota {
-  text-align: center; // centrado
-  margin-top: 32px; // separación superior
-  padding: 20px; // padding
+  text-align: center;
+  margin-top: 32px;
+  padding: 20px;
   background: rgba($color-arcilla, 0.1); // fondo coral sutil
   border: 1px solid rgba($color-arcilla, 0.3); // borde coral
-  border-radius: 16px; // esquinas redondeadas
-  font-size: 14px; // tamaño
-  color: $color-tinta-suave; // gris
+  border-radius: 16px;
+  font-size: 14px;
+  color: $color-tinta-suave;
 
   a { color: $color-bosque; font-weight: 600; text-decoration: underline; } // enlace subrayado
 }
 
 // gestión nutricional (demo.html)
-.gestion-nutricional { padding: 80px 0; } // padding estándar
+.gestion-nutricional { background: rgba($color-arcilla, 0.06); padding: 80px 0; }
 
 // contenedor flex de notas + logros
 .contenido-superior { @include flex(row, flex-start, center, 48px); flex-wrap: wrap; } // fila con gap grande
@@ -562,7 +563,7 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
   overflow: hidden; display: flex; align-items: flex-end; flex-shrink: 0; // flex columna, relleno desde abajo
 
   .barra-progreso__relleno {
-    width: 100%; height: 70%; background: linear-gradient(to top, $color-musgo, $color-bosque); // degradado verde
+    width: 100%; height: 70%; background: linear-gradient(to top, $color-musgo, $color-bosque);
     border-radius: 50px; // mismo radio
   }
 }
@@ -584,11 +585,11 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 // acordeón de desafíos semanales
 .acordeon {
   background: $color-crema; margin-bottom: 20px; border-radius: 18px; overflow: hidden; // fondo blanco, esquinas redondeadas
-  box-shadow: $sombra-suave; // sombra suave
+  box-shadow: $sombra-suave;
   // header del acordeón
   summary {
     padding: 16px 24px; cursor: pointer; font-weight: 600; font-size: 16px; // padding, puntero, semi-bold
-    color: #FFFFFF; background: linear-gradient(90deg, $color-bosque, $color-bosque-profundo); // degradado verde
+    color: #FFFFFF; background: linear-gradient(90deg, $color-bosque, $color-bosque-profundo);
     list-style: none; // sin triángulo
   }
 
@@ -605,15 +606,15 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 
 // layout de 2 columnas (login/registro)
 .layout-acceso {
-  display: grid; // grid
+  display: grid;
   grid-template-columns: 1fr 1fr; // 2 columnas iguales
-  min-height: 100vh; // alto completo viewport
+  min-height: 100vh;
 }
 
 // lado izquierdo (imagen + contenido oscuro)
 .lado-visual {
   @include seccion-oscura; // fondo oscuro
-  padding: 32px; // padding
+  padding: 32px;
   @include flex(column, stretch); // columna estirada
   position: relative; // para overlay
   overflow: hidden; // oculta desbordamiento
@@ -624,11 +625,11 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
   }
 
   .imagen-visual {
-    width: 100%; // ancho completo
-    aspect-ratio: 16 / 9; // ratio 16:9
+    width: 100%;
+    aspect-ratio: 16 / 9;
     object-fit: cover; // cubre sin deformar
-    border-radius: 16px; // esquinas redondeadas
-    margin-bottom: 24px; // separación inferior
+    border-radius: 16px;
+    margin-bottom: 24px;
     box-shadow: 0 20px 40px -10px rgba(0,0,0,0.3); // sombra oscura
   }
 
@@ -645,28 +646,28 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 
 // lado derecho (formulario)
 .lado-formulario {
-  padding: 32px; // padding
+  padding: 32px;
   @include flex(row, center, center); // fila centrada
 
   .contenedor-formulario { width: 100%; max-width: 420px; } // contenedor angosto
 
   .encabezado-form {
-    margin-bottom: 32px; // separación inferior
+    margin-bottom: 32px;
     h1 { font-size: 28px; color: $color-tinta; margin-bottom: 8px; font-weight: 400; } // título
     p { font-size: 14px; color: $color-tinta-suave; } // subtítulo
   }
 
   .divisor-form {
-    @include flex(row, center, center, 16px); margin: 32px 0; // fila centrada con gap
+    @include flex(row, center, center, 16px); margin: 32px 0;
     span { @include label-text; color: $color-tinta-suave; } // texto "o"
   }
 
   .botones-sociales {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; // grid 2 columnas
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px;
   }
 
   .boton-social {
-    @include flex(row, center, center, 12px); padding: 12px; // fila centrada con gap
+    @include flex(row, center, center, 12px); padding: 12px;
     border-radius: 12px; border: 1px solid rgba($color-bosque, 0.15); cursor: pointer; // borde sutil
     font-size: 14px; font-weight: 500; color: $color-tinta; background: $color-crema; // texto oscuro, fondo blanco
     &:hover { background: $color-papel; border-color: $color-arcilla; transition: background 0.2s, border-color 0.2s; } // hover con borde coral
@@ -689,18 +690,18 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 
   // buscador + select
   .search-section {
-    @include flex(row, stretch, flex-start, 20px); // fila con gap
-    margin-bottom: 32px; // separación inferior
+    @include flex(row, stretch, flex-start, 20px);
+    margin-bottom: 32px;
 
     .input-group, .select-group { position: relative; flex: 1; } // grupos internos
 
     .input-icon {
-      position: absolute; left: 16px; top: 50%; transform: translateY(-50%); // icono dentro del input
+      position: absolute; left: 16px; top: 50%; transform: translateY(-50%);
       font-size: 15px; color: $color-musgo; pointer-events: none; // no intercepta clics
     }
 
     input, select {
-      width: 100%; padding: 14px 14px 14px 44px; // padding con espacio para icono
+      width: 100%; padding: 14px 14px 14px 44px;
       border: 1px solid $color-borde; border-radius: 12px; // borde sutil
       font-size: 15px; font-family: $fuente-sans; color: $color-texto-tarjeta; // tipografía
       background: $color-crema; box-sizing: border-box; transition: 0.2s; // fondo blanco
@@ -713,9 +714,9 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 
   // cuadrícula de resultados
   .results-grid {
-    display: grid; // grid
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); // auto-fill mínimo 320px
-    gap: 24px; // espacio entre
+    gap: 24px;
   }
 
   .glucosa-sin-resultados { text-align: center; color: $color-texto-tarjeta-suave; } // mensaje sin resultados
@@ -727,14 +728,14 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
     &:hover { transform: translateY(-4px); border-color: rgba($color-bosque, 0.2); } // hover levanta
   }
 
-  .food-title { font-weight: 700; font-size: 20px; color: $color-bosque-profundo; margin-bottom: 4px; // título bold
+  .food-title { font-weight: 700; font-size: 20px; color: $color-bosque-profundo; margin-bottom: 4px;
     i { color: $color-bosque; } } // icono verde
   .food-category { @include label-text(13px); color: $color-texto-tarjeta-suave; margin-bottom: 15px; } // categoría uppercase
 
   .ig-badge {
     align-self: flex-start; padding: 6px 14px; border-radius: $radio-pill; // badge pill
-    color: #fff; font-weight: 700; font-size: 12px; letter-spacing: 0.5px; // blanco bold
-    text-transform: uppercase; margin-bottom: 15px; // mayúscula
+    color: #fff; font-weight: 700; font-size: 12px; letter-spacing: 0.5px;
+    text-transform: uppercase; margin-bottom: 15px;
   }
   .ig-bajo  { background: $color-ig-bajo; } // badge verde
   .ig-medio { background: $color-ig-medio; color: $color-tinta; } // badge amarillo

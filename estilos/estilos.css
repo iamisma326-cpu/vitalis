@@ -1186,6 +1186,11 @@ h1 em, h2 em {
   padding-top: 0;
 }
 
+.seccion-glucosa {
+  background: #D8E0E5;
+  padding: 80px 0;
+}
+
 .seccion--compacta {
   padding: 0 0 40px;
 }
@@ -1580,7 +1585,7 @@ h1 em, h2 em {
 }
 
 .demo-cta-claro {
-  background: #D8E0E5;
+  background: rgba(232, 145, 106, 0.06);
   color: #1C2D32;
   text-align: center;
 }
@@ -1609,6 +1614,7 @@ h1 em, h2 em {
 }
 
 .gestion-nutricional {
+  background: rgba(232, 145, 106, 0.06);
   padding: 80px 0;
 }
 
