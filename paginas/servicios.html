@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Funcionalidades — VITALIS</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="../estilos/estilos.css">
+</head>
+<body>
+
+<header class="encabezado">
+  <div class="contenedor contenedor-nav">
+    <a href="../index.html" class="logo">
+      <img src="../recursos/imagenes/logo.svg" width="28" height="28" alt="Vitalis">
+      <span class="fuente-serif">VITALIS</span>
+    </a>
+    <nav class="enlaces-nav">
+      <a href="../index.html">Inicio</a>
+      <a href="beneficios.html">Beneficios</a>
+      <a href="servicios.html" class="activa">Funcionalidades</a>
+      <a href="como-funciona.html">Cómo Funciona</a>
+      <a href="demo.html">Demo</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <a href="login.html" class="boton-iniciar-sesion">Iniciar Sesión <i class="fas fa-arrow-right"></i></a>
+  </div>
+</header>
+
+<section class="pagina-heroe pagina-heroe--servicios">
+  <div class="contenedor">
+    <div class="pastilla">Funcionalidades</div>
+    <h1>Una plataforma,<br><em>control total.</em></h1>
+    <p>Herramientas inteligentes para personas con diabetes que buscan precisión sin complicaciones. Todo lo que necesitas para cuidar tu salud en un solo lugar.</p>
+  </div>
+</section>
+
+<section class="seccion--compacta">
+  <div class="contenedor">
+    <div class="detalle-servicio">
+      <div class="texto-servicio">
+        <div class="num-servicio">001</div>
+        <h2>Menús Semanales con IA</h2>
+        <p>Nuestra IA Mistral analiza más de 50 factores (alergias, preferencias, actividad, objetivos) para generar un menú de 7 días. Incluye desayuno, almuerzo, cena y colaciones, equilibrando el índice glucémico y los carbohidratos en cada plato.</p>
+        <div class="etiquetas">
+          <span class="etiqueta">Personalización 100%</span>
+          <span class="etiqueta">7 días completos</span>
+        </div>
+      </div>
+      <div class="imagen-servicio"><img src="../recursos/imagenes/comida-saludable.jpg" alt="Menús IA"></div>
+    </div>
+
+    <div class="detalle-servicio detalle-servicio--reverso">
+      <div class="imagen-servicio"><img src="../recursos/imagenes/alimentos-saludables.jpg" alt="Recetas"></div>
+      <div class="texto-servicio">
+        <div class="num-servicio">002</div>
+        <h2>Recetas y Lista de Compras</h2>
+        <p>Cada plato viene con su receta paso a paso, ingredientes con cantidades exactas y conteo nutricional. Además, generamos automáticamente una lista de la compra organizada por categorías para que no pierdas tiempo en el supermercado.</p>
+        <div class="etiquetas">
+          <span class="etiqueta">Paso a paso</span>
+          <span class="etiqueta">Lista automática</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="detalle-servicio detalle-servicio--borde">
+      <div class="texto-servicio">
+        <div class="num-servicio">003</div>
+        <h2>Seguimiento y Reportes</h2>
+        <p>Registra tus niveles de glucosa diarios y tu consumo alimenticio. La plataforma crea reportes visuales semanales para que veas tu evolución y entiendas cómo los alimentos afectan tu cuerpo.</p>
+        <div class="etiquetas">
+          <span class="etiqueta">Gráficos de evolución</span>
+          <span class="etiqueta">Historial completo</span>
+        </div>
+      </div>
+      <div class="imagen-servicio"><img src="../recursos/imagenes/heroe-gestion-diabetes.jpg" alt="Control Glucosa"></div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion-mockup">
+  <div class="contenedor texto-centrado">
+    <div class="pastilla">Interfaz</div>
+    <h2>Diseñada para <em>tu día a día</em></h2>
+    <div class="ventana-mockup">
+      <!-- barra del navegador -->
+      <div class="barra-navegador">
+        <span class="punto rojo"></span>
+        <span class="punto amarillo"></span>
+        <span class="punto verde"></span>
+        <span class="url">app.vitalis.pe/dashboard</span>
+      </div>
+
+      <!-- contenido -->
+      <div class="cuerpo-mockup">
+        <div class="tarjeta">
+          <span class="mini-titulo">Glucosa hoy</span>
+          <strong class="valor">105 mg/dL</strong>
+          <div class="barra"><span></span></div>
+        </div>
+
+        <div class="tarjeta">
+          <span class="mini-titulo">Menú de hoy</span>
+          <ul class="menu">
+            <li><i class="fas fa-sun ic-arcilla"></i> Desayuno <span>Avena con frutos rojos</span></li>
+            <li><i class="fas fa-cloud-sun ic-arcilla"></i> Almuerzo <span>Ensalada de lentejas</span></li>
+            <li class="sin-borde"><i class="fas fa-moon ic-bosque"></i> Cena <span>Salmón al horno</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="contenedor texto-centrado">
+    <div class="pastilla">Comparativa</div>
+    <h2>Básico vs <em>Premium</em></h2>
+  </div>
+  <div class="tabla-contenedor">
+    <table>
+      <thead>
+        <tr>
+          <th>Característica</th>
+          <th class="texto-centrado">Básico (S/ 0.00)</th>
+          <th class="texto-centrado">Premium (S/ 29.90)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="td-etiqueta">Generación de menús IA</td><td class="texto-centrado">1 al mes</td><td class="texto-centrado">Ilimitados</td></tr>
+        <tr><td class="td-etiqueta">Lista de compras automática</td><td class="texto-centrado"><i class="fas fa-times ic-tenue"></i></td><td class="texto-centrado"><i class="fas fa-check ic-musgo"></i></td></tr>
+        <tr><td class="td-etiqueta">Gráficos de glucosa avanzados</td><td class="texto-centrado"><i class="fas fa-times ic-tenue"></i></td><td class="texto-centrado"><i class="fas fa-check ic-musgo"></i></td></tr>
+        <tr><td class="td-etiqueta">Soporte de profesionales</td><td class="texto-centrado"><i class="fas fa-times ic-tenue"></i></td><td class="texto-centrado"><i class="fas fa-check ic-musgo"></i></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="fondo-crema">
+  <div class="contenedor texto-centrado">
+    <div class="pastilla">Planes</div>
+    <h2>Acceso <em>transparente</em></h2>
+    <div class="malla-precios">
+      <div class="tarjeta-precio">
+        <h3>Básico</h3>
+        <div class="sub-precio">Para empezar a cuidarte.</div>
+        <div class="valor-precio">S/ 0.00 <span>/mes</span></div>
+        <ul class="lista-precio">
+          <li><i class="fas fa-check"></i> 1 menú semanal IA al mes</li>
+          <li><i class="fas fa-check"></i> Recetas básicas</li>
+          <li><i class="fas fa-check"></i> Registro de glucosa manual</li>
+          <li class="deshabilitado"><i class="fas fa-times"></i> Lista de compras automática</li>
+        </ul>
+        <a href="registro.html" class="boton boton-borde-bosque boton-bloque">Empezar Gratis</a>
+      </div>
+      <div class="tarjeta-precio destacada">
+        <div class="insignia-precio">Recomendado</div>
+        <h3>Premium</h3>
+        <div class="sub-precio">Control y acompañamiento total.</div>
+        <div class="valor-precio">S/ 29.90 <span>/mes</span></div>
+        <ul class="lista-precio">
+          <li><i class="fas fa-check ic-arcilla"></i> Menús semanales ilimitados</li>
+          <li><i class="fas fa-check ic-arcilla"></i> Recetas premium y lista de compras</li>
+          <li><i class="fas fa-check ic-arcilla"></i> Reportes visuales y gráficos</li>
+          <li><i class="fas fa-check ic-arcilla"></i> Soporte de profesionales de la salud</li>
+        </ul>
+        <a href="registro.html" class="boton boton-primario boton-bloque">Probar Premium</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="pie-pagina">
+  <div class="contenedor contenedor-pie">
+    <div>© 2026 Vitalis. Salud, con criterio y tecnología.</div>
+    <div class="enlaces-pie">
+      <a href="privacidad.html">Privacidad</a>
+      <a href="terminos.html">Términos</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+// colores base
+$color-papel: #E8EDEF;          // fondo body — gris-azul claro
+$color-crema: #FFFFFF;          // tarjetas — blanco
+$color-crema-profundo: #D8E0E5; // detalle sutil (etiquetas, badges)
+$color-seccion: #D8E0E5;        // secciones decorativas (marquee, mockup)
+$color-tinta: #1C2D32;          // texto sobre fondo claro
+$color-tinta-suave: #4A5D5A;    // texto secundario
+$color-bosque: #00CEC8;         // teal vibrante (botones, enlaces, acentos)
+$color-bosque-profundo: #0D2229;// teal muy oscuro (footer, secciones oscuras)
+$color-musgo: #5E8A8F;          // menta apagada
+$color-arcilla: #E8916A;        // coral
+
+// estados índice glucémico (glucosa.html)
+$color-ig-bajo:  $color-bosque;  // teal = seguro
+$color-ig-medio: $color-arcilla; // coral = precaución
+$color-ig-alto:  #C75D4D;        // coral-rojo armónico = alto
+
+$color-borde: #C5D5D9;          // bordes ligeros
+$color-texto-tarjeta: #1C2D32;  // texto sobre tarjetas blancas
+$color-texto-tarjeta-suave: #4A5D5A; // texto secundario sobre tarjetas blancas
+
+// tipografías
+$fuente-serif: Georgia, 'Times New Roman', Times, serif;
+$fuente-sans: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+// bordes reutilizables
+$borde-tarjeta: 1px solid rgba($color-bosque, 0.08);
+$borde-sutil:   1px solid rgba($color-bosque, 0.1);
+$borde-suave:   1px solid rgba($color-bosque, 0.05);
+
+// sombras
+$sombra-suave: 0 10px 30px -15px rgba($color-bosque, 0.1);
+
+// tamaños y radios
+$radio-borde-grande: 24px;
+$radio-pill: 999px;
+$radio-circular: 50%;

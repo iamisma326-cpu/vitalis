@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iniciar Sesión — VITALIS</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="../estilos/estilos.css">
+</head>
+<body>
+
+<div class="layout-acceso">
+  <!-- lado visual -->
+  <div class="lado-visual">
+    <a href="../index.html" class="logo-claro">
+      <img src="../recursos/imagenes/logo-claro.svg" width="28" height="28" alt="Vitalis">
+      <span>VITALIS</span>
+    </a>
+    
+    <img class="imagen-visual" src="../recursos/imagenes/login-comida.jpg" alt="Ingredientes frescos">
+    
+    <div class="contenido-visual">
+      <h2>Personaliza tu alimentación,<br><em> mejora tu bienestar.</em></h2>
+      <p>Únete a la plataforma que está transformando la gestión de la diabetes mediante inteligencia artificial y evidencia médica.</p>
+    </div>
+    
+    <div class="footer-visual">© 2025 Vitalis. Salud, con criterio y tecnología.</div>
+  </div>
+
+  <!-- lado formulario -->
+  <div class="lado-formulario">
+    <div class="contenedor-formulario">
+      <a href="../index.html" class="volver-link"><i class="fas fa-arrow-left"></i> Volver a Vitalis</a>
+      <div class="encabezado-form">
+        <h1>Bienvenido de nuevo.</h1>
+        <p>Accede a tu panel para ver tu menú de esta semana.</p>
+      </div>
+
+      <form action="tu-backend-login" method="POST">
+        <div class="formulario-grupo">
+          <label class="formulario-etiqueta">Correo electrónico</label>
+          <input type="email" required class="formulario-entrada" placeholder="tu@correo.com">
+        </div>
+        <div class="formulario-grupo">
+          <label class="formulario-etiqueta">Contraseña</label>
+          <input type="password" required class="formulario-entrada" placeholder="••••••••">
+        </div>
+        <button type="submit" class="boton boton-primario boton-bloque">Acceder a Vitalis <i class="fas fa-arrow-right"></i></button>
+      </form>
+
+      <div class="divisor-form">
+        <span>o continúa con</span>
+      </div>
+
+      <div class="botones-sociales">
+        <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faccounts.google.com%2F&hl=es" class="boton-social google"><i class="fab fa-google"></i> Google</a>
+        <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Des_LA" class="boton-social facebook"><i class="fab fa-facebook"></i> Facebook</a>
+      </div>
+
+      <p class="enlace-inferior">¿No tienes una cuenta? <a href="registro.html">Crear cuenta gratis</a></p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

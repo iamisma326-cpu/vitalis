@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto — VITALIS</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="../estilos/estilos.css">
+</head>
+<body>
+
+<header class="encabezado">
+  <div class="contenedor contenedor-nav">
+    <a href="../index.html" class="logo">
+      <img src="../recursos/imagenes/logo.svg" width="28" height="28" alt="Vitalis">
+      <span class="fuente-serif">VITALIS</span>
+    </a>
+    <nav class="enlaces-nav">
+      <a href="../index.html">Inicio</a>
+      <a href="beneficios.html">Beneficios</a>
+      <a href="servicios.html">Funcionalidades</a>
+      <a href="como-funciona.html">Cómo Funciona</a>
+      <a href="demo.html">Demo</a>
+      <a href="contacto.html" class="activa">Contacto</a>
+    </nav>
+    <a href="login.html" class="boton-iniciar-sesion">Iniciar Sesión <i class="fas fa-arrow-right"></i></a>
+  </div>
+</header>
+
+<section class="pagina-heroe">
+  <div class="contenedor">
+    <div class="pastilla">Soporte y WhatsApp</div>
+    <h1>Hablemos de tu <em>salud.</em></h1>
+    <p>¿Tienes dudas sobre cómo funciona la plataforma o necesitas ayuda para configurar tu perfil? Rellena el formulario y te responderemos directamente por WhatsApp.</p>
+  </div>
+</section>
+
+<section class="seccion--sin-top">
+  <div class="contenedor malla-2 malla-2--contacto">
+    <div>
+      <form action="https://wa.me/51999888777" method="GET" target="_blank">
+        <input type="hidden" name="text" value="Hola, tengo una consulta sobre Vitalis:">
+        <div class="malla-2 malla-2--form">
+          <div class="formulario-grupo">
+            <label class="formulario-etiqueta">Nombre</label>
+            <input type="text" name="nombre" required class="formulario-entrada" placeholder="¿Cómo te llamas?">
+          </div>
+          <div class="formulario-grupo">
+            <label class="formulario-etiqueta">Teléfono</label>
+            <input type="tel" name="telefono" required class="formulario-entrada" placeholder="+51 999 999 999">
+          </div>
+        </div>
+        <div class="formulario-grupo">
+          <label class="formulario-etiqueta">Asunto</label>
+          <select name="asunto" class="formulario-entrada">
+            <option>Duda general sobre la plataforma</option>
+            <option>Soporte técnico con mi cuenta</option>
+            <option>Información para profesionales</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="formulario-grupo">
+          <label class="formulario-etiqueta">Tu mensaje</label>
+          <textarea name="mensaje" rows="4" required class="formulario-entrada" placeholder="Escribe aquí tu consulta..."></textarea>
+        </div>
+        <p class="nota-formulario">Al hacer clic en el botón, se abrirá WhatsApp con tu mensaje listo para enviar. Respondemos en menos de 24h laborables.</p>
+        <button type="submit" class="boton boton-wa boton-bloque">Enviar por WhatsApp <i class="fab fa-whatsapp ic-grande"></i></button>
+      </form>
+    </div>
+    <div>
+      <div class="caja-contacto">
+        <h3>Contacto Directo</h3>
+        <div class="item-contacto">
+          <i class="fab fa-whatsapp ic-wa"></i>
+          <div><strong>WhatsApp Soporte</strong><a href="https://wa.me/51999888777" target="_blank">+51 999 888 777</a></div>
+        </div>
+        <div class="item-contacto">
+          <i class="fas fa-envelope ic-arcilla"></i>
+          <div><strong>Correo electrónico</strong><a href="mailto:hola@vitalis.pe">hola@vitalis.pe</a></div>
+        </div>
+        <div class="item-contacto">
+          <i class="fas fa-map-marker-alt ic-arcilla"></i>
+          <div><strong>Oficina</strong>Av. Javier Prado 1234, San Isidro<br>Lima, Perú</div>
+        </div>
+      </div>
+      <div class="caja-profesional">
+        <h3>Para Profesionales</h3>
+        <p>Si eres médico o nutricionista y quieres integrar Vitalis en tu consulta para gestionar a tus pacientes con diabetes, escríbenos para conocer las condiciones del panel profesional.</p>
+        <div class="caja-aviso">
+          <i class="fas fa-info-circle"></i>
+          <span>Ofrecemos descuentos por volumen para clínicas y centros de salud.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fondo-crema">
+  <div class="contenedor texto-centrado mb-64">
+    <div class="pastilla">Canales de Atención</div>
+    <h2>Estamos para <em>ayudarte</em></h2>
+  </div>
+  <div class="tabla-contenedor">
+    <table>
+      <thead>
+        <tr>
+          <th>Canal</th>
+          <th>Usuarios Básicos</th>
+          <th>Usuarios Premium</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="td-etiqueta">WhatsApp / Email</td><td>48h laborables</td><td>24h laborables</td></tr>
+        <tr><td class="td-etiqueta">Chat en plataforma</td><td>No disponible</td><td>L-V de 9:00 a 18:00</td></tr>
+        <tr><td class="td-etiqueta">Soporte técnico IA</td><td>Base de conocimientos</td><td>Prioridad alta</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="contenedor contenedor--1000">
+    <div class="mb-64">
+      <div class="pastilla">Preguntas Frecuentes</div>
+      <h2>Ayuda <em>rápida</em></h2>
+    </div>
+    <details class="elemento-faq">
+      <summary>¿Cómo cambio mis preferencias una vez creado el perfil?</summary>
+      <p>Puedes acceder a "Ajustes de Perfil" en tu dashboard en cualquier momento. Al modificar una preferencia (como una nueva alergia), la IA Mistral recalculará automáticamente tu próximo menú semanal para asegurar que se ajuste a tus nuevas necesidades sin comprometer el equilibrio glucémico.</p>
+    </details>
+    <details class="elemento-faq">
+      <summary>¿Puedo sustituir una comida si no me apetece?</summary>
+      <p>Sí. Junto a cada plato del menú hay un botón de "Sustituir". Al pulsarlo, la IA generará tres alternativas con un perfil nutricional idéntico (mismos carbohidratos, calorías e índice glucémico) para que elijas la que más te apetezca ese día sin alterar tu control glucémico.</p>
+    </details>
+  </div>
+</section>
+
+<footer class="pie-pagina">
+  <div class="contenedor contenedor-pie">
+    <div>© 2026 Vitalis. Salud, con criterio y tecnología.</div>
+    <div class="enlaces-pie">
+      <a href="privacidad.html">Privacidad</a>
+      <a href="terminos.html">Términos</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

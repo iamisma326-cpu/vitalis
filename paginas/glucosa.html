@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Índice Glucémico — VITALIS</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="../estilos/estilos.css">
+</head>
+<body>
+
+<header class="encabezado">
+  <div class="contenedor contenedor-nav">
+    <a href="../index.html" class="logo">
+      <img src="../recursos/imagenes/logo.svg" width="28" height="28" alt="Vitalis">
+      <span class="fuente-serif">VITALIS</span>
+    </a>
+    <nav class="enlaces-nav">
+      <a href="../index.html">Inicio</a>
+      <a href="beneficios.html">Beneficios</a>
+      <a href="servicios.html">Funcionalidades</a>
+      <a href="como-funciona.html">Cómo Funciona</a>
+      <a href="demo.html">Demo</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <a href="login.html" class="boton-iniciar-sesion">Iniciar Sesión <i class="fas fa-arrow-right"></i></a>
+  </div>
+</header>
+
+<section class="pagina-heroe">
+  <div class="contenedor">
+    <div class="pastilla">Ejemplo · Menú de usuario</div>
+    <h1>Índice glucémico,<br><em>al instante.</em></h1>
+    <p>Busca el índice glucémico (IG) de los alimentos y descubre opciones saludables de intercambio inmediato para mantener tus niveles en rango seguro.</p>
+    <p><strong>Nota:</strong> esta página es solo un ejemplo de cómo se vería esta herramienta dentro de tu menú de usuario.</p>
+  </div>
+</section>
+
+<section class="seccion-glucosa seccion--sin-top">
+  <div class="contenedor">
+    <div class="glucosa-panel">
+      <div class="search-section">
+        <span class="input-group">
+          <i class="fas fa-magnifying-glass input-icon"></i>
+          <input type="text" id="searchInput" placeholder="Ej. Pan, Plátano, Espinaca..." onkeyup="filtrarAlimentos()">
+        </span>
+        <span class="select-group">
+          <i class="fas fa-folder-open input-icon"></i>
+          <select id="categorySelect" onchange="filtrarAlimentos()">
+            <option value="Todos">Todas las categorías</option>
+            <option value="Carbohidratos">Carbohidratos</option>
+            <option value="Frutas">Frutas</option>
+            <option value="Legumbres">Legumbres</option>
+            <option value="Verduras">Verduras</option>
+          </select>
+        </span>
+      </div>
+      <div class="results-grid" id="resultsGrid"></div>
+    </div>
+  </div>
+</section>
+
+<footer class="pie-pagina">
+  <div class="contenedor contenedor-pie">
+    <div>© 2026 Vitalis. Salud, con criterio y tecnología.</div>
+    <div class="enlaces-pie">
+      <a href="privacidad.html">Privacidad</a>
+      <a href="terminos.html">Términos</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../recursos/js/glucosa.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+// atajo flexbox con parámetros
+@mixin flex($direccion: row, $alinear: center, $justificar: flex-start, $espacio: 0, $display: flex) {
+  display: $display;
+  flex-direction: $direccion;
+  align-items: $alinear;
+  justify-content: $justificar;
+  gap: $espacio;
+}
+
+// título de tarjeta (h3)
+@mixin titulo-tarjeta($size: 24px) {
+  font-size: $size;
+  color: $color-texto-tarjeta;
+  font-weight: 500;
+}
+
+// etiqueta uppercase
+@mixin label-text($size: 12px) {
+  font-size: $size; text-transform: uppercase; letter-spacing: 1px;
+}
+
+// sombra suave de tarjeta
+@mixin tarjeta-sombra {
+  box-shadow: 0 10px 30px -15px rgba(22, 21, 19, 0.1);
+}
+
+// grid responsive (columnas automáticas)
+@mixin grid-reponsive($columnas: 3, $espacio: 32px) {
+  display: grid;
+  grid-template-columns: repeat($columnas, 1fr);
+  gap: $espacio;
+}
+
+// tarjeta blanca base
+@mixin tarjeta-base($padding: 32px, $radio: $radio-borde-grande, $borde: $borde-tarjeta) {
+  background: $color-crema;
+  border: $borde;
+  border-radius: $radio;
+  padding: $padding;
+}
+
+// círculo perfecto con icono centrado
+@mixin circulo($tam) {
+  width: $tam; height: $tam; border-radius: $radio-circular;
+  @include flex(row, center, center); flex-shrink: 0;
+}
+
+// campo de formulario estándar
+@mixin campo-form {
+  width: 100%;
+  border: 1px solid rgba($color-bosque, 0.2);
+  border-radius: 12px;
+  font-family: $fuente-sans;
+  outline: none;
+  &:focus { border-color: $color-arcilla; }
+}
+
+// sección con fondo oscuro
+@mixin seccion-oscura {
+  background: $color-bosque-profundo;
+  color: #FFFFFF;
+  h2, h3 { color: #FFFFFF; }
+}

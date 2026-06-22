@@ -1,0 +1,214 @@
+// contenedores y utilidades
+.contenedor { max-width: 1400px; margin: 0 auto; padding: 0 24px; } // ancho máximo, centrado, padding lateral
+.texto-centrado { text-align: center; } // texto centrado
+.fondo-crema { background: $color-seccion; } // fondo crema alterno
+.fondo-oscuro { @include seccion-oscura; } // fondo oscuro reutilizable
+.fuente-serif { font-family: $fuente-serif; } // tipografía serif
+
+// badge uppercase
+.pastilla {
+  @include flex(row, center, flex-start, 8px, inline-flex); padding: 4px 12px; // layout horizontal con gap
+  border: 1px solid rgba($color-bosque, 0.2); border-radius: $radio-pill; font-size: 12px; // borde sutil, pill, texto pequeño
+  letter-spacing: 1px; text-transform: uppercase; font-weight: 500; color: $color-texto-tarjeta-suave; margin-bottom: 24px; // espaciado, mayúscula, peso medio, margen inferior
+}
+
+// botones
+.boton {
+  @include flex(row, center, center, 12px, inline-flex); padding: 16px 32px; border-radius: $radio-pill; // flex centrado, padding amplio, pill
+  font-weight: 500; cursor: pointer; border: none; font-size: 16px; text-decoration: none; // peso medio, puntero, sin borde, tamaño 16px, sin subrayado
+  text-align: center; // texto centrado
+}
+.boton-primario { background: $color-bosque; color: #FFFFFF; &:hover { background: $color-arcilla; color: $color-tinta; } } // verde, hover coral
+.boton-arcilla { background: $color-arcilla; color: $color-tinta; &:hover { background: $color-bosque; color: #FFFFFF; } } // coral, hover verde
+.boton-wa { background: #25D366; color: #fff; &:hover { background: #128C7E; } } // whatsapp green, hover más oscuro
+.boton-bloque { width: 100%; } // ancho completo
+.boton-borde-bosque { background: transparent; color: $color-bosque; border: 1px solid $color-bosque; &:hover { background: $color-bosque; color: #FFFFFF; } } // transparente con borde verde
+
+// encabezado y navegación
+.encabezado {
+  position: sticky; top: 0; background: $color-bosque-profundo; // sticky arriba, fondo oscuro
+  border-bottom: 1px solid rgba(255,255,255,0.08); padding: 20px 0; z-index: 100; // borde inferior sutil blanco, padding vertical, z-index alto
+  .contenedor-nav { @include flex(row, center, space-between); } // fila, centrado vertical, espacio entre
+  .logo { @include flex(row, center, flex-start, 8px); span { font-family: $fuente-serif; font-size: 20px; color: #FFFFFF; } } // logo con serif blanco
+  .enlaces-nav { @include flex(row, center, flex-start, 32px); a { font-size: 14px; color: rgba(255,255,255,0.75); &:hover { color: #FFFFFF; } } } // enlaces en fila, hover blanco sólido
+  .enlaces-nav a.activa { color: $color-arcilla; font-weight: 600; } // enlace activo coral
+  .boton-iniciar-sesion { @include flex(row, center, flex-start, 8px); font-size: 14px; font-weight: 500; padding: 10px 20px; border-radius: $radio-pill; border: 1px solid #FFFFFF; color: #FFFFFF; &:hover { background: #FFFFFF; color: $color-bosque-profundo; } } // botón borde blanco, hover inverso
+}
+
+// pie de página
+.pie-pagina {
+  background: $color-bosque-profundo; color: #DAE4E8; padding: 32px 0; // fondo oscuro, texto claro, padding vertical
+  .contenedor-pie { @include flex(row, center, space-between); font-size: 12px; opacity: 0.7; } // fila, espacio entre, texto pequeño semitransparente
+  .enlaces-pie { @include flex(row, center, flex-start, 24px); a { color: #FFFFFF; } } // enlaces en fila, blancos
+}
+
+// tarjetas y grids
+.malla-2 { @include grid-reponsive(2, 48px); } // 2 columnas, gap 48px
+.malla-3 { @include grid-reponsive(3, 32px); } // 3 columnas, gap 32px
+.malla-4 { @include grid-reponsive(4, 40px); } // 4 columnas, gap 40px
+.desplazado-top { margin-top: 48px; } // margen superior
+
+// tarjeta estándar con hover
+.tarjeta {
+  @include tarjeta-base; // fondo blanco, borde sutil, radio 24px, padding 32px
+  &:hover { box-shadow: 0 20px 40px -10px rgba($color-bosque, 0.15); } // sombra al hover
+  i { font-size: 24px; color: $color-arcilla; margin-bottom: 20px; } // icono grande coral
+  h3 { @include titulo-tarjeta(22px); margin-bottom: 12px; } // título tarjeta 22px
+  p { font-size: 14px; color: $color-texto-tarjeta-suave; } // texto secundario
+}
+
+// tarjeta de servicio con imagen
+.tarjeta-servicio {
+  background: $color-crema; border-radius: $radio-borde-grande; overflow: hidden; box-shadow: 0 5px 15px rgba($color-bosque, 0.05); display: flex; flex-direction: column; // fondo blanco, sombra sutil, columna
+  .envoltura-img { aspect-ratio: 4/3; overflow: hidden; img { width: 100%; height: 100%; object-fit: cover; } } // contenedor imagen 4:3
+  .cuerpo-servicio { padding: 32px; flex-grow: 1; display: flex; flex-direction: column; } // cuerpo con padding, ocupa espacio restante
+  .num-servicio { @include label-text; color: $color-arcilla; margin-bottom: 12px; } // número de servicio uppercase
+  h3 { @include titulo-tarjeta; margin-bottom: 12px; } // título tarjeta
+  p { font-size: 14px; color: $color-texto-tarjeta-suave; margin-bottom: 24px; flex-grow: 1; } // descripción, ocupa espacio
+}
+
+// tablas
+.td-etiqueta { color: $color-texto-tarjeta; font-weight: 500; } // primera columna en negrita
+.tabla-contenedor { max-width: 1000px; margin: 0 auto; overflow-x: auto; } // contenedor con scroll horizontal
+table {
+  width: 100%; border-collapse: collapse; text-align: left; background: $color-crema; border-radius: 16px; overflow: hidden; @include tarjeta-sombra; border: $borde-suave; // tabla blanca, bordes colapsados, sombra
+  th { background: $color-bosque; color: #FFFFFF; padding: 16px; @include label-text; } // encabezado verde con texto blanco
+  td { padding: 16px; font-size: 14px; color: $color-texto-tarjeta-suave; border-bottom: $borde-suave; } // celda con borde inferior sutil
+}
+
+// formularios
+.formulario-grupo { margin-bottom: 24px; } // separación entre campos
+.formulario-etiqueta { display: block; @include label-text; color: $color-bosque; font-weight: 500; margin-bottom: 8px; } // etiqueta uppercase verde
+.formulario-entrada { @include campo-form; background: transparent; padding: 14px 16px; font-size: 15px; color: $color-texto-tarjeta; } // input estándar
+// utilidades
+
+// color de iconos / texto puntual
+.ic-musgo { color: $color-musgo; } // color musgo
+.ic-arcilla { color: $color-arcilla; } // color arcilla
+.ic-bosque { color: $color-bosque; } // color bosque
+.ic-tenue { color: #bbb; } // gris tenue
+.ic-wa { color: #25D366; } // whatsapp green
+.ic-grande { font-size: 18px; } // icono más grande
+
+// anchos de contenedor
+.contenedor--600 { max-width: 600px; } // ancho máximo 600px
+.contenedor--900 { max-width: 900px; } 
+.contenedor--1000 { max-width: 1000px; } 
+
+// márgenes utilitarios
+.mt-16 { margin-top: 16px; } 
+.mt-32 { margin-top: 32px; } 
+.mt-48 { margin-top: 48px; } 
+.mb-64 { margin-bottom: 64px; } 
+
+// cabeceras de sección
+.cabecera-flex { @include flex(row, flex-end, space-between); flex-wrap: wrap; gap: 24px; margin-bottom: 64px; } // cabecera con espacio entre
+
+// círculo contenedor de icono
+.circulo-icono {
+  @include circulo(56px); background: $color-seccion; // círculo de 56px
+  margin-bottom: 24px; color: $color-texto-tarjeta; font-size: 20px; // margen inferior, texto oscuro
+  i { line-height: 1; margin: 0; @include flex(row, center, center); width: 100%; height: 100%; } // icono centrado dentro del círculo
+}
+.circulo-icono--sm { width: 48px; height: 48px; } // círculo pequeño 48px
+
+// tarjeta sin fondo ni borde
+.tarjeta--plana { background: transparent; border: none; box-shadow: none; padding: 0; } // sin fondo, sin borde, sin sombra
+
+// select desplegable personalizado (demo)
+.demo-select-wrapper {
+  position: relative; // para posicionar la flecha
+  display: flex; // flex row
+  align-items: center; // centrado vertical
+  gap: 12px; // espacio entre icono y select
+
+  .demo-select-icono {
+    font-size: 20px; // icono mediano
+    color: $color-arcilla; // color coral
+    flex-shrink: 0; // no se encoge
+    width: 24px; // ancho fijo
+    text-align: center; // centrado
+  }
+
+  select {
+    width: 100%; // ancho completo
+    padding: 14px 40px 14px 16px; // padding con espacio para flecha
+    border: 1px solid rgba($color-bosque, 0.2); // borde sutil verde
+    border-radius: 12px; // esquinas redondeadas
+    font-family: $fuente-sans; // tipografía sans
+    font-size: 15px; 
+    color: $color-tinta; // texto oscuro
+    background: $color-crema; // fondo blanco
+    cursor: pointer; // puntero
+    outline: none; // sin outline al focus
+    appearance: none; // sin estilo nativo
+    transition: border-color 0.2s; // transición suave
+
+    &:focus {
+      border-color: $color-arcilla; // borde coral al focus
+    }
+  }
+
+  .demo-select-flecha {
+    position: absolute; // posicionada sobre el select
+    right: 16px; // alineada a la derecha
+    top: 50%; // centrada vertical
+    transform: translateY(-50%); // ajuste fino centrado
+    color: $color-tinta-suave; // gris
+    font-size: 12px; 
+    pointer-events: none; // no interfiere con clics
+  }
+}
+
+// checkboxes compactos en línea (demo — pregunta 5)
+.demo-checkbox-grid {
+  display: flex; 
+  flex-wrap: wrap; // wrap si no caben
+  gap: 10px; // espacio entre items
+
+  .demo-checkbox-item {
+    display: inline-flex; 
+    align-items: center; // centrado vertical
+    gap: 8px; // espacio interno
+    padding: 10px 16px; // padding compacto
+    border: 1px solid rgba($color-bosque, 0.15); // borde sutil
+    border-radius: 12px; // esquinas redondeadas
+    cursor: pointer; // puntero
+    transition: border-color 0.2s, background 0.2s; // transición suave
+    background: $color-crema; // fondo blanco
+    user-select: none; // no seleccionable
+
+    input {
+      accent-color: $color-bosque; // color del checkbox
+      width: 16px; // ancho
+      height: 16px; // alto
+      flex-shrink: 0; // no se encoge
+    }
+
+    i {
+      font-size: 16px; // icono pequeño
+      color: $color-arcilla; // coral
+      flex-shrink: 0; // no se encoge
+    }
+
+    h4 {
+      font-size: 14px; 
+      color: $color-texto-tarjeta; // oscuro
+      font-weight: 500; // peso medio
+    }
+
+    &:hover {
+      border-color: $color-arcilla; // borde coral al hover
+      background: rgba($color-arcilla, 0.04); // fondo coral muy sutil
+    }
+  }
+}
+
+// enlace volver atrás
+.volver-link {
+  @include flex(row, center, flex-start, 8px, inline-flex); // inline-flex con gap
+  font-size: 13px; 
+  color: $color-tinta-suave; 
+  text-decoration: none; // sin subrayado
+  margin-bottom: 16px; // margen inferior
+}

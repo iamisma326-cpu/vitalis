@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo IA — VITALIS</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="../estilos/estilos.css">
+</head>
+<body>
+
+<header class="encabezado">
+  <div class="contenedor contenedor-nav">
+    <a href="../index.html" class="logo">
+      <img src="../recursos/imagenes/logo.svg" width="28" height="28" alt="Vitalis">
+      <span class="fuente-serif">VITALIS</span>
+    </a>
+    <nav class="enlaces-nav">
+      <a href="../index.html">Inicio</a>
+      <a href="beneficios.html">Beneficios</a>
+      <a href="servicios.html">Funcionalidades</a>
+      <a href="como-funciona.html">Cómo Funciona</a>
+      <a href="demo.html" class="activa">Demo</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <a href="login.html" class="boton-iniciar-sesion">Iniciar Sesión <i class="fas fa-arrow-right"></i></a>
+  </div>
+</header>
+
+<!-- hero demo -->
+<section class="demo-hero">
+  <div class="contenedor">
+    <div class="pastilla">Demo Interactiva</div>
+    <h1>Pruébalo <em>ahora.</em></h1>
+    <p>Completa este breve formulario y descubre cómo la IA Mistral diseñaría tu plan nutricional en segundos.</p>
+  </div>
+</section>
+
+<!-- formulario demo -->
+<section class="seccion--sin-top">
+  <div class="contenedor">
+    <form class="demo-contenedor" action="#" method="POST" id="demo-form">
+
+      <!-- pregunta 1 -->
+      <fieldset class="demo-seccion">
+        <legend class="demo-titulo-seccion"><span class="num-seccion">1</span> ¿Qué tipo de diabetes tienes?</legend>
+        <div class="demo-select-wrapper">
+          <i class="fas fa-syringe demo-select-icono"></i>
+          <select name="diabetes" required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="1">Tipo 1</option>
+            <option value="2">Tipo 2</option>
+            <option value="pre">Prediabetes</option>
+          </select>
+          <i class="fas fa-chevron-down demo-select-flecha"></i>
+        </div>
+      </fieldset>
+
+      <!-- pregunta 2 -->
+      <fieldset class="demo-seccion">
+        <legend class="demo-titulo-seccion"><span class="num-seccion">2</span> ¿Cuál es tu objetivo principal?</legend>
+        <div class="demo-select-wrapper">
+          <i class="fas fa-bullseye demo-select-icono"></i>
+          <select name="objetivo" required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="glucosa">Controlar mi glucosa</option>
+            <option value="perder">Perder peso</option>
+            <option value="mantener">Mantener mi peso</option>
+            <option value="habitos">Mejorar hábitos</option>
+          </select>
+          <i class="fas fa-chevron-down demo-select-flecha"></i>
+        </div>
+      </fieldset>
+
+      <!-- pregunta 3 -->
+      <fieldset class="demo-seccion">
+        <legend class="demo-titulo-seccion"><span class="num-seccion">3</span> ¿Cuál es tu nivel de actividad física?</legend>
+        <div class="demo-select-wrapper">
+          <i class="fas fa-heart-pulse demo-select-icono"></i>
+          <select name="actividad" required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="bajo">Bajo — Sedentario</option>
+            <option value="moderado">Moderado — 2-3 días/semana</option>
+            <option value="alto">Alto — 4+ días/semana</option>
+          </select>
+          <i class="fas fa-chevron-down demo-select-flecha"></i>
+        </div>
+      </fieldset>
+
+      <!-- pregunta 4 -->
+      <fieldset class="demo-seccion">
+        <legend class="demo-titulo-seccion"><span class="num-seccion">4</span> ¿Tienes alguna restricción alimentaria?</legend>
+        <div class="demo-select-wrapper">
+          <i class="fas fa-ban demo-select-icono"></i>
+          <select name="restriccion" required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="ninguna">Ninguna</option>
+            <option value="sin-azucar">Sin azúcar</option>
+            <option value="sin-lactosa">Sin lactosa</option>
+            <option value="sin-gluten">Sin gluten</option>
+            <option value="vegetariano">Vegetariano</option>
+            <option value="otra">Otra</option>
+          </select>
+          <i class="fas fa-chevron-down demo-select-flecha"></i>
+        </div>
+      </fieldset>
+
+      <!-- pregunta 5 -->
+      <fieldset class="demo-seccion">
+        <legend class="demo-titulo-seccion"><span class="num-seccion">5</span> ¿Qué alimentos prefieres consumir?</legend>
+        <p class="demo-leyenda">Selección múltiple</p>
+        <div class="demo-checkbox-grid">
+          <label class="demo-checkbox-item">
+            <input type="checkbox" name="alimentos" value="pollo">
+            <i class="fas fa-drumstick-bite"></i>
+            <h4>Pollo</h4>
+          </label>
+          <label class="demo-checkbox-item">
+            <input type="checkbox" name="alimentos" value="pescado">
+            <i class="fas fa-fish"></i>
+            <h4>Pescado</h4>
+          </label>
+          <label class="demo-checkbox-item">
+            <input type="checkbox" name="alimentos" value="carne">
+            <i class="fas fa-burger"></i>
+            <h4>Carne</h4>
+          </label>
+          <label class="demo-checkbox-item">
+            <input type="checkbox" name="alimentos" value="huevos">
+            <i class="fas fa-egg"></i>
+            <h4>Huevos</h4>
+          </label>
+          <label class="demo-checkbox-item">
+            <input type="checkbox" name="alimentos" value="frutas">
+            <i class="fas fa-apple-whole"></i>
+            <h4>Frutas</h4>
+          </label>
+          <label class="demo-checkbox-item">
+            <input type="checkbox" name="alimentos" value="verduras">
+            <i class="fas fa-carrot"></i>
+            <h4>Verduras</h4>
+          </label>
+          <label class="demo-checkbox-item">
+            <input type="checkbox" name="alimentos" value="legumbres">
+            <i class="fas fa-bowl-rice"></i>
+            <h4>Legumbres</h4>
+          </label>
+          <label class="demo-checkbox-item">
+            <input type="checkbox" name="alimentos" value="lacteos">
+            <i class="fas fa-mug-saucer"></i>
+            <h4>Lácteos</h4>
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- pregunta 6 -->
+      <fieldset class="demo-seccion demo-seccion--ultima">
+        <legend class="demo-titulo-seccion"><span class="num-seccion">6</span> ¿Cuántas comidas deseas realizar al día?</legend>
+        <div class="demo-select-wrapper">
+          <i class="fas fa-utensils demo-select-icono"></i>
+          <select name="comidas" required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="3">3 comidas</option>
+            <option value="4">4 comidas</option>
+            <option value="5">5 comidas</option>
+            <option value="6">6 comidas</option>
+          </select>
+          <i class="fas fa-chevron-down demo-select-flecha"></i>
+        </div>
+      </fieldset>
+
+    </form>
+  </div>
+</section>
+
+<details class="demo-details">
+<summary class="boton boton-primario boton-bloque">
+  <i class="fas fa-microchip"></i>
+  Generar Menú IA
+</summary>
+
+<!-- conector animado -->
+<div class="demo-conector">
+  <div class="conector-icono"><i class="fas fa-microchip"></i></div>
+  <div class="conector-texto">IA Mistral Procesando</div>
+  <div class="conector-subtexto">Variables analizadas en segundos</div>
+</div>
+
+<!-- resultado / preview -->
+<section class="seccion--sin-top">
+  <div class="contenedor">
+    <div class="demo-resultado">
+      <div class="resultado-header">
+        <div class="ia-badge"><i class="fas fa-microchip"></i> Generado por IA Mistral</div>
+        <h3>Menú de Ejemplo — Día 1</h3>
+        <p>Basado en tus preferencias seleccionadas</p>
+      </div>
+
+      <div class="demo-menu">
+        <!-- desayuno -->
+        <div class="demo-menu-item">
+          <div class="menu-icono"><i class="fas fa-sun"></i></div>
+          <div class="menu-contenido">
+            <h4>Desayuno · 8:00 AM</h4>
+            <p>Avena con frutos rojos, almendras y canela</p>
+          </div>
+          <div class="menu-nutricion">
+            <div class="cho">35g CHO</div>
+            <div class="ig">IG: 42 (Bajo)</div>
+          </div>
+        </div>
+
+        <!-- colación 1 -->
+        <div class="demo-menu-item">
+          <div class="menu-icono"><i class="fas fa-apple-whole"></i></div>
+          <div class="menu-contenido">
+            <h4>Colación · 11:00 AM</h4>
+            <p>Yogur griego natural con semillas de chía</p>
+          </div>
+          <div class="menu-nutricion">
+            <div class="cho">12g CHO</div>
+            <div class="ig">IG: 28 (Bajo)</div>
+          </div>
+        </div>
+
+        <!-- almuerzo -->
+        <div class="demo-menu-item">
+          <div class="menu-icono"><i class="fas fa-cloud-sun"></i></div>
+          <div class="menu-contenido">
+            <h4>Almuerzo · 1:00 PM</h4>
+            <p>Ensalada de lentejas con verduras asadas y aguacate</p>
+          </div>
+          <div class="menu-nutricion">
+            <div class="cho">45g CHO</div>
+            <div class="ig">IG: 32 (Bajo)</div>
+          </div>
+        </div>
+
+        <!-- colación 2 -->
+        <div class="demo-menu-item">
+          <div class="menu-icono"><i class="fas fa-lemon"></i></div>
+          <div class="menu-contenido">
+            <h4>Colación · 5:00 PM</h4>
+            <p>Manzana con mantequilla de almendras (1 cda)</p>
+          </div>
+          <div class="menu-nutricion">
+            <div class="cho">20g CHO</div>
+            <div class="ig">IG: 38 (Bajo)</div>
+          </div>
+        </div>
+
+        <!-- cena -->
+        <div class="demo-menu-item sin-borde">
+          <div class="menu-icono"><i class="fas fa-moon"></i></div>
+          <div class="menu-contenido">
+            <h4>Cena · 8:00 PM</h4>
+            <p>Salmón al horno con brócoli al vapor y quinoa</p>
+          </div>
+          <div class="menu-nutricion">
+            <div class="cho">30g CHO</div>
+            <div class="ig">IG: 35 (Bajo)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- resumen nutricional -->
+      <div class="demo-nutricion-total">
+        <div class="nutricion-item">
+          <div class="nutricion-num">142g</div>
+          <div class="nutricion-label">Carbohidratos totales</div>
+        </div>
+        <div class="nutricion-item">
+          <div class="nutricion-num">1,650</div>
+          <div class="nutricion-label">Calorías diarias</div>
+        </div>
+        <div class="nutricion-item">
+          <div class="nutricion-num">35</div>
+          <div class="nutricion-label">Índice glucémico promedio</div>
+        </div>
+      </div>
+
+      <div class="demo-nota">
+        <i class="fas fa-info-circle"></i> Este es un menú de ejemplo. <a href="registro.html">Regístrate gratis</a> para generar tu plan completo de 7 días con recetas, lista de compras y seguimiento de glucosa.
+      </div>
+    </div>
+  </div>
+</section>
+
+</details>
+
+<!-- gestión nutricional -->
+<section class="gestion-nutricional">
+  <div class="contenedor">
+    <div class="texto-centrado mb-64">
+      <div class="pastilla">Acompañamiento Diario</div>
+      <h2>Gestión nutricional <em>inteligente</em></h2>
+      <p class="parrafo-intro">No solo generamos menús. Te damos las herramientas para acompañarte cada día.</p>
+    </div>
+
+    <div class="contenido-superior">
+      <!-- notas -->
+      <div class="notas">
+        <h2 class="titulo-seccion-gn">Mis Notas</h2>
+        <textarea placeholder="Escribe aquí cómo te sentiste hoy con tu alimentación..."></textarea>
+        <button class="boton boton-primario boton-bloque">Guardar Nota</button>
+      </div>
+
+      <!-- logros -->
+      <div class="logros">
+        <h2 class="titulo-seccion-gn">Logros</h2>
+        <div class="logros__contenido">
+          <div class="barra-progreso">
+            <div class="barra-progreso__relleno"></div>
+          </div>
+          <div class="insignias">
+            <span>7 Días Seguidos</span>
+            <span>Glucosa Estable</span>
+            <span>Menú Cumplido</span>
+          </div>
+        </div>
+        <p class="logros__texto">7 de 10 desafíos completados (70%)</p>
+      </div>
+    </div>
+
+    <!-- desafíos -->
+    <div class="desafios">
+      <h2 class="titulo-seccion-gn">Desafíos Semanales</h2>
+
+      <details class="acordeon">
+        <summary>Bloque 1: Alimentación Inteligente</summary>
+        <div class="acordeon__item">
+          <h4>Semana 1: El reto de la mitad del plato</h4>
+          <p>En el almuerzo y la cena, asegúrate de que la mitad de tu plato esté llena de verduras sin almidón (brócoli, espinaca, lechuga, pepino). ¡Fibra al rescate!</p>
+        </div>
+        <div class="acordeon__item">
+          <h4>Semana 2: Snacks con estrategia</h4>
+          <p>Cambia los snacks ultraprocesados por una opción que combine proteína y grasa saludable, como almendras o apio con hummus.</p>
+        </div>
+        <div class="acordeon__item">
+          <h4>Semana 3: Despídete del azúcar líquido</h4>
+          <p>Reemplaza jugos envasados, gaseosas o cafés azucarados por agua, infusiones frías o agua saborizada naturalmente.</p>
+        </div>
+        <div class="acordeon__item sin-borde">
+          <h4>Semana 4: El orden de los factores sí altera el producto</h4>
+          <p>Consume primero verduras, luego proteínas y grasas saludables, y finalmente carbohidratos para ralentizar la absorción de glucosa.</p>
+        </div>
+      </details>
+
+      <details class="acordeon">
+        <summary>Bloque 2: Movimiento y Actividad Física</summary>
+        <div class="acordeon__item">
+          <h4>Semana 5: La caminata post-comida</h4>
+          <p>Camina entre 10 y 15 minutos después de tu comida principal para ayudar a controlar el pico de glucosa.</p>
+        </div>
+        <div class="acordeon__item">
+          <h4>Semana 6: Rompe el sedentarismo</h4>
+          <p>Levántate cada hora, estírate o camina durante 2 minutos.</p>
+        </div>
+        <div class="acordeon__item sin-borde">
+          <h4>Semana 7: Suma fuerza</h4>
+          <p>Realiza al menos dos sesiones semanales de ejercicios de fuerza utilizando tu propio peso corporal.</p>
+        </div>
+      </details>
+
+      <details class="acordeon">
+        <summary>Bloque 3: Bienestar, Monitoreo y Estilo de Vida</summary>
+        <div class="acordeon__item">
+          <h4>Semana 8: El detective de las etiquetas</h4>
+          <p>Revisa los ingredientes de los productos e identifica azúcares ocultos como jarabe de maíz, maltodextrina o fructosa.</p>
+        </div>
+        <div class="acordeon__item">
+          <h4>Semana 9: El diario de las emociones</h4>
+          <p>Dedica 5 minutos diarios a respirar profundamente o escribir cómo te sientes para gestionar el estrés.</p>
+        </div>
+        <div class="acordeon__item sin-borde">
+          <h4>Semana 10: Higiene del sueño</h4>
+          <p>Duerme entre 7 y 8 horas cada noche y evita las pantallas al menos 30 minutos antes de dormir.</p>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<section class="seccion--sin-top">
+  <div class="contenedor contenedor--900">
+    <div class="bloque-cta">
+      <div class="bloque-cta__icono"><i class="fas fa-droplet"></i></div>
+      <h2>Consulta tus niveles de <em>glucosa</em></h2>
+      <p>¿No sabes si tus niveles están en un rango seguro? Revisarlo y entiende en qué momento debes actuar.</p>
+      <p><strong>Nota:</strong> este es solo un ejemplo de cómo se vería esta herramienta dentro de tu menú de usuario.</p>
+      <a href="glucosa.html" class="boton boton-arcilla">Ver niveles de Glucosa <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- cta final -->
+<section class="demo-cta-claro">
+  <div class="contenedor contenedor--600">
+    <h2>¿Te gustó lo que <em>viste?</em></h2>
+    <p class="cta-texto">Crea tu cuenta gratuita ahora y obtén tu primer menú semanal completo con recetas, lista de compras y conteo nutricional exacto.</p>
+    <a href="registro.html" class="boton boton-arcilla">Crear cuenta gratis <i class="fas fa-arrow-right"></i></a>
+  </div>
+</section>
+
+<footer class="pie-pagina">
+  <div class="contenedor contenedor-pie">
+    <div>© 2025 Vitalis. Salud, con criterio y tecnología.</div>
+    <div class="enlaces-pie">
+      <a href="privacidad.html">Privacidad</a>
+      <a href="terminos.html">Términos</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
