@@ -48,9 +48,8 @@
 // campo de formulario estándar
 @mixin campo-form {
   width: 100%;
-  border: 1px solid rgba($color-bosque, 0.2);
-  border-radius: 12px;
-  font-family: $fuente-sans;
+  border: 1px solid $bosque-opaco-2;
+  border-radius: $radio-12;
   outline: none;
   &:focus { border-color: $color-arcilla; }
 }
@@ -58,6 +57,6 @@
 // sección con fondo oscuro
 @mixin seccion-oscura {
   background: $color-bosque-profundo;
-  color: #FFFFFF;
-  h2, h3 { color: #FFFFFF; }
+  color: $color-blanco;
+  h2, h3 { color: $color-blanco; }
 }

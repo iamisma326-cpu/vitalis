@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Demo IA — VITALIS</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="../estilos/estilos.css">
+
 </head>
 <body>
 
 <header class="encabezado">
   <div class="contenedor contenedor-nav">
     <a href="../index.html" class="logo">
-      <img src="../recursos/imagenes/logo.svg" width="28" height="28" alt="Vitalis">
+      <img src="../recursos/imagenes/iconos/logo/logo.svg" width="28" height="28" alt="Vitalis">
       <span class="fuente-serif">VITALIS</span>
     </a>
     <nav class="enlaces-nav">
@@ -23,7 +23,7 @@
       <a href="demo.html" class="activa">Demo</a>
       <a href="contacto.html">Contacto</a>
     </nav>
-    <a href="login.html" class="boton-iniciar-sesion">Iniciar Sesión <i class="fas fa-arrow-right"></i></a>
+    <a href="login.html" class="boton-iniciar-sesion">Iniciar Sesión <img src="../recursos/imagenes/iconos/header/i-arrow-right-header.svg" width="14" height="14" alt="→"></a>
   </div>
 </header>
 
@@ -45,14 +45,14 @@
       <fieldset class="demo-seccion">
         <legend class="demo-titulo-seccion"><span class="num-seccion">1</span> ¿Qué tipo de diabetes tienes?</legend>
         <div class="demo-select-wrapper">
-          <i class="fas fa-syringe demo-select-icono"></i>
+          <img src="../recursos/imagenes/iconos/arcilla/i-syringe-arcilla.svg" width="20" height="20" alt="Diabetes">
           <select name="diabetes" required>
             <option value="" disabled selected>Selecciona una opción</option>
             <option value="1">Tipo 1</option>
             <option value="2">Tipo 2</option>
             <option value="pre">Prediabetes</option>
           </select>
-          <i class="fas fa-chevron-down demo-select-flecha"></i>
+          <img src="../recursos/imagenes/iconos/default/i-chevron-down.svg" width="12" height="12" alt="▼">
         </div>
       </fieldset>
 
@@ -60,7 +60,7 @@
       <fieldset class="demo-seccion">
         <legend class="demo-titulo-seccion"><span class="num-seccion">2</span> ¿Cuál es tu objetivo principal?</legend>
         <div class="demo-select-wrapper">
-          <i class="fas fa-bullseye demo-select-icono"></i>
+          <img src="../recursos/imagenes/iconos/arcilla/i-bullseye-arcilla.svg" width="20" height="20" alt="Objetivo">
           <select name="objetivo" required>
             <option value="" disabled selected>Selecciona una opción</option>
             <option value="glucosa">Controlar mi glucosa</option>
@@ -68,7 +68,7 @@
             <option value="mantener">Mantener mi peso</option>
             <option value="habitos">Mejorar hábitos</option>
           </select>
-          <i class="fas fa-chevron-down demo-select-flecha"></i>
+          <img src="../recursos/imagenes/iconos/default/i-chevron-down.svg" width="12" height="12" alt="▼">
         </div>
       </fieldset>
 
@@ -76,14 +76,14 @@
       <fieldset class="demo-seccion">
         <legend class="demo-titulo-seccion"><span class="num-seccion">3</span> ¿Cuál es tu nivel de actividad física?</legend>
         <div class="demo-select-wrapper">
-          <i class="fas fa-heart-pulse demo-select-icono"></i>
+          <img src="../recursos/imagenes/iconos/arcilla/i-heart-pulse-arcilla.svg" width="20" height="20" alt="Actividad">
           <select name="actividad" required>
             <option value="" disabled selected>Selecciona una opción</option>
             <option value="bajo">Bajo — Sedentario</option>
             <option value="moderado">Moderado — 2-3 días/semana</option>
             <option value="alto">Alto — 4+ días/semana</option>
           </select>
-          <i class="fas fa-chevron-down demo-select-flecha"></i>
+          <img src="../recursos/imagenes/iconos/default/i-chevron-down.svg" width="12" height="12" alt="▼">
         </div>
       </fieldset>
 
@@ -91,7 +91,7 @@
       <fieldset class="demo-seccion">
         <legend class="demo-titulo-seccion"><span class="num-seccion">4</span> ¿Tienes alguna restricción alimentaria?</legend>
         <div class="demo-select-wrapper">
-          <i class="fas fa-ban demo-select-icono"></i>
+          <img src="../recursos/imagenes/iconos/arcilla/i-ban-arcilla.svg" width="20" height="20" alt="Restricción">
           <select name="restriccion" required>
             <option value="" disabled selected>Selecciona una opción</option>
             <option value="ninguna">Ninguna</option>
@@ -101,7 +101,7 @@
             <option value="vegetariano">Vegetariano</option>
             <option value="otra">Otra</option>
           </select>
-          <i class="fas fa-chevron-down demo-select-flecha"></i>
+          <img src="../recursos/imagenes/iconos/default/i-chevron-down.svg" width="12" height="12" alt="▼">
         </div>
       </fieldset>
 
@@ -112,42 +112,42 @@
         <div class="demo-checkbox-grid">
           <label class="demo-checkbox-item">
             <input type="checkbox" name="alimentos" value="pollo">
-            <i class="fas fa-drumstick-bite"></i>
+            <img src="../recursos/imagenes/iconos/arcilla/i-drumstick-bite-arcilla.svg" width="16" height="16" alt="Pollo">
             <h4>Pollo</h4>
           </label>
           <label class="demo-checkbox-item">
             <input type="checkbox" name="alimentos" value="pescado">
-            <i class="fas fa-fish"></i>
+            <img src="../recursos/imagenes/iconos/arcilla/i-fish-arcilla.svg" width="16" height="16" alt="Pescado">
             <h4>Pescado</h4>
           </label>
           <label class="demo-checkbox-item">
             <input type="checkbox" name="alimentos" value="carne">
-            <i class="fas fa-burger"></i>
+            <img src="../recursos/imagenes/iconos/arcilla/i-burger-arcilla.svg" width="16" height="16" alt="Carne">
             <h4>Carne</h4>
           </label>
           <label class="demo-checkbox-item">
             <input type="checkbox" name="alimentos" value="huevos">
-            <i class="fas fa-egg"></i>
+            <img src="../recursos/imagenes/iconos/arcilla/i-egg-arcilla.svg" width="16" height="16" alt="Huevos">
             <h4>Huevos</h4>
           </label>
           <label class="demo-checkbox-item">
             <input type="checkbox" name="alimentos" value="frutas">
-            <i class="fas fa-apple-whole"></i>
+            <img src="../recursos/imagenes/iconos/arcilla/i-apple-whole-arcilla.svg" width="16" height="16" alt="Frutas">
             <h4>Frutas</h4>
           </label>
           <label class="demo-checkbox-item">
             <input type="checkbox" name="alimentos" value="verduras">
-            <i class="fas fa-carrot"></i>
+            <img src="../recursos/imagenes/iconos/arcilla/i-carrot-arcilla.svg" width="16" height="16" alt="Verduras">
             <h4>Verduras</h4>
           </label>
           <label class="demo-checkbox-item">
             <input type="checkbox" name="alimentos" value="legumbres">
-            <i class="fas fa-bowl-rice"></i>
+            <img src="../recursos/imagenes/iconos/arcilla/i-bowl-rice-arcilla.svg" width="16" height="16" alt="Legumbres">
             <h4>Legumbres</h4>
           </label>
           <label class="demo-checkbox-item">
             <input type="checkbox" name="alimentos" value="lacteos">
-            <i class="fas fa-mug-saucer"></i>
+            <img src="../recursos/imagenes/iconos/arcilla/i-mug-saucer-arcilla.svg" width="16" height="16" alt="Lácteos">
             <h4>Lácteos</h4>
           </label>
         </div>
@@ -157,7 +157,7 @@
       <fieldset class="demo-seccion demo-seccion--ultima">
         <legend class="demo-titulo-seccion"><span class="num-seccion">6</span> ¿Cuántas comidas deseas realizar al día?</legend>
         <div class="demo-select-wrapper">
-          <i class="fas fa-utensils demo-select-icono"></i>
+          <img src="../recursos/imagenes/iconos/arcilla/i-utensils-arcilla.svg" width="20" height="20" alt="Comidas">
           <select name="comidas" required>
             <option value="" disabled selected>Selecciona una opción</option>
             <option value="3">3 comidas</option>
@@ -165,7 +165,7 @@
             <option value="5">5 comidas</option>
             <option value="6">6 comidas</option>
           </select>
-          <i class="fas fa-chevron-down demo-select-flecha"></i>
+          <img src="../recursos/imagenes/iconos/default/i-chevron-down.svg" width="12" height="12" alt="▼">
         </div>
       </fieldset>
 
@@ -175,13 +175,13 @@
 
 <details class="demo-details">
 <summary class="boton boton-primario boton-bloque">
-  <i class="fas fa-microchip"></i>
+  <img src="../recursos/imagenes/iconos/primario/i-microchip-primary.svg" width="16" height="16" alt="IA">
   Generar Menú IA
 </summary>
 
 <!-- conector animado -->
 <div class="demo-conector">
-  <div class="conector-icono"><i class="fas fa-microchip"></i></div>
+  <div class="conector-icono"><img src="../recursos/imagenes/iconos/primario/i-microchip-primary.svg" width="24" height="24" alt="IA"></div>
   <div class="conector-texto">IA Mistral Procesando</div>
   <div class="conector-subtexto">Variables analizadas en segundos</div>
 </div>
@@ -191,7 +191,7 @@
   <div class="contenedor">
     <div class="demo-resultado">
       <div class="resultado-header">
-        <div class="ia-badge"><i class="fas fa-microchip"></i> Generado por IA Mistral</div>
+        <div class="ia-badge"><img src="../recursos/imagenes/iconos/arcilla/i-microchip-arcilla.svg" width="16" height="16" alt="IA"> Generado por IA Mistral</div>
         <h3>Menú de Ejemplo — Día 1</h3>
         <p>Basado en tus preferencias seleccionadas</p>
       </div>
@@ -199,7 +199,7 @@
       <div class="demo-menu">
         <!-- desayuno -->
         <div class="demo-menu-item">
-          <div class="menu-icono"><i class="fas fa-sun"></i></div>
+          <div class="menu-icono"><img src="../recursos/imagenes/iconos/arcilla/i-sun-arcilla.svg" width="20" height="20" alt="Desayuno"></div>
           <div class="menu-contenido">
             <h4>Desayuno · 8:00 AM</h4>
             <p>Avena con frutos rojos, almendras y canela</p>
@@ -212,7 +212,7 @@
 
         <!-- colación 1 -->
         <div class="demo-menu-item">
-          <div class="menu-icono"><i class="fas fa-apple-whole"></i></div>
+          <div class="menu-icono"><img src="../recursos/imagenes/iconos/arcilla/i-apple-whole-arcilla.svg" width="20" height="20" alt="Colación"></div>
           <div class="menu-contenido">
             <h4>Colación · 11:00 AM</h4>
             <p>Yogur griego natural con semillas de chía</p>
@@ -225,7 +225,7 @@
 
         <!-- almuerzo -->
         <div class="demo-menu-item">
-          <div class="menu-icono"><i class="fas fa-cloud-sun"></i></div>
+          <div class="menu-icono"><img src="../recursos/imagenes/iconos/arcilla/i-cloud-sun-arcilla.svg" width="20" height="20" alt="Almuerzo"></div>
           <div class="menu-contenido">
             <h4>Almuerzo · 1:00 PM</h4>
             <p>Ensalada de lentejas con verduras asadas y aguacate</p>
@@ -238,7 +238,7 @@
 
         <!-- colación 2 -->
         <div class="demo-menu-item">
-          <div class="menu-icono"><i class="fas fa-lemon"></i></div>
+          <div class="menu-icono"><img src="../recursos/imagenes/iconos/arcilla/i-lemon-arcilla.svg" width="20" height="20" alt="Colación"></div>
           <div class="menu-contenido">
             <h4>Colación · 5:00 PM</h4>
             <p>Manzana con mantequilla de almendras (1 cda)</p>
@@ -251,7 +251,7 @@
 
         <!-- cena -->
         <div class="demo-menu-item sin-borde">
-          <div class="menu-icono"><i class="fas fa-moon"></i></div>
+          <div class="menu-icono"><img src="../recursos/imagenes/iconos/arcilla/i-moon-arcilla.svg" width="20" height="20" alt="Cena"></div>
           <div class="menu-contenido">
             <h4>Cena · 8:00 PM</h4>
             <p>Salmón al horno con brócoli al vapor y quinoa</p>
@@ -280,7 +280,7 @@
       </div>
 
       <div class="demo-nota">
-        <i class="fas fa-info-circle"></i> Este es un menú de ejemplo. <a href="registro.html">Regístrate gratis</a> para generar tu plan completo de 7 días con recetas, lista de compras y seguimiento de glucosa.
+        <img src="../recursos/imagenes/iconos/arcilla/i-info-circle-arcilla.svg" width="16" height="16" alt="Info"> Este es un menú de ejemplo. <a href="registro.html">Regístrate gratis</a> para generar tu plan completo de 7 días con recetas, lista de compras y seguimiento de glucosa.
       </div>
     </div>
   </div>
@@ -385,11 +385,11 @@
 <section class="seccion-glucosa">
   <div class="contenedor contenedor--900">
     <div class="bloque-cta">
-      <div class="bloque-cta__icono"><i class="fas fa-droplet"></i></div>
+      <div class="bloque-cta__icono"><img src="../recursos/imagenes/iconos/arcilla/i-droplet-arcilla.svg" width="24" height="24" alt="Glucosa"></div>
       <h2>Consulta tus niveles de <em>glucosa</em></h2>
       <p>¿No sabes si tus niveles están en un rango seguro? Revisarlo y entiende en qué momento debes actuar.</p>
       <p><strong>Nota:</strong> este es solo un ejemplo de cómo se vería esta herramienta dentro de tu menú de usuario.</p>
-      <a href="glucosa.html" class="boton boton-arcilla">Ver niveles de Glucosa <i class="fas fa-arrow-right"></i></a>
+      <a href="glucosa.html" class="boton boton-arcilla">Ver niveles de Glucosa <img src="../recursos/imagenes/iconos/arcilla/i-arrow-right-arcilla.svg" width="16" height="16" alt="→"></a>
     </div>
   </div>
 </section>
@@ -399,7 +399,7 @@
   <div class="contenedor contenedor--600">
     <h2>¿Te gustó lo que <em>viste?</em></h2>
     <p class="cta-texto">Crea tu cuenta gratuita ahora y obtén tu primer menú semanal completo con recetas, lista de compras y conteo nutricional exacto.</p>
-    <a href="registro.html" class="boton boton-arcilla">Crear cuenta gratis <i class="fas fa-arrow-right"></i></a>
+    <a href="registro.html" class="boton boton-arcilla">Crear cuenta gratis <img src="../recursos/imagenes/iconos/arcilla/i-arrow-right-arcilla.svg" width="16" height="16" alt="→"></a>
   </div>
 </section>
 

@@ -9,6 +9,7 @@ body {
 }
 
 img { max-width: 100%; display: block; } // img responsive
+img[src*="/iconos/"] { display: inline-block; vertical-align: middle; } // alineación vertical de iconos (como el logo)
 a { text-decoration: none; color: inherit; } // enlaces sin subrayado
 ul { list-style: none; } // listas sin viñetas
 
@@ -38,10 +39,10 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
   .contenedor { position: relative; z-index: 1; } // contenido sobre el overlay
 
   .pastilla {
-    color: #FFFFFF; // texto blanco
+    color: $color-blanco; // texto blanco
     border-color: rgba(255, 255, 255, 0.3); // borde blanco semitransparente
   }
-  h1 { color: #FFFFFF; font-weight: 700; font-size: 60px; } // título blanco bold
+  h1 { color: $color-blanco; font-weight: 700; font-size: 60px; } // título blanco bold
   h1 em { color: $color-arcilla; } // énfasis coral
   p { color: rgba(255, 255, 255, 0.85); font-weight: 700; font-size: 20px; } // texto blanco bold
 }
@@ -107,16 +108,6 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
     flex-wrap: wrap;
     margin-bottom: 64px;
   }
-
-  // estadísticas (3 columnas)
-  .estadisticas { 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); // 3 columnas iguales
-    gap: 32px;
-    max-width: 600px;
-    margin: 0 auto;
-
-  }
 }
 
 // filosofía (index.html)
@@ -138,7 +129,7 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
   h2 { font-size: 36px; color: $color-bosque-profundo; margin-top: 12px; margin-bottom: 24px; font-weight: 500; } // título semi-bold
   p { font-size: 16px; color: $color-tinta-suave; margin-bottom: 32px; } // descripción
   .etiquetas { @include flex(row, center, flex-start, 8px); flex-wrap: wrap; margin-bottom: 32px; .etiqueta { background: $color-crema-profundo; color: $color-tinta-suave; padding: 6px 12px; border-radius: $radio-pill; font-size: 12px; } } // etiquetas en fila
-  .imagen-servicio { border-radius: 16px; overflow: hidden; aspect-ratio: 4/3; img { width: 100%; height: 100%; object-fit: cover; } } // imagen 4:3
+  .imagen-servicio { border-radius: $radio-16; overflow: hidden; aspect-ratio: 4/3; img { width: 100%; height: 100%; object-fit: cover; } } // imagen 4:3
 }
 .detalle-servicio--borde { border-bottom: $borde-sutil; } // borde inferior
 .detalle-servicio--reverso .imagen-servicio { order: 2; } // imagen a la derecha
@@ -153,9 +144,9 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
     margin: 48px auto 0;
     background: $color-crema; // fondo blanco
     border: $borde-tarjeta; // borde sutil
-    border-radius: 16px;
+    border-radius: $radio-16;
     overflow: hidden; // oculta desbordamiento
-    box-shadow: 0 20px 50px -10px rgba($color-bosque, .15);
+    box-shadow: 0 20px 50px -10px $bosque-opaco-15;
   }
 
   // barra superior del navegador
@@ -184,7 +175,7 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
     padding: 20px;
     background: $color-crema; // fondo blanco
     border: $borde-suave; // borde sutil
-    border-radius: 12px;
+    border-radius: $radio-12;
 
     .mini-titulo { @include label-text; color: $color-arcilla; display: block; margin-bottom: 8px; } // etiqueta uppercase coral
     .valor { display: block; font-family: $fuente-serif; font-size: 28px; color: $color-bosque-profundo; font-weight: 400; } // valor numérico serif
@@ -213,12 +204,12 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 // precios (servicios.html)
 .malla-precios { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 1000px; margin: 48px auto 0;
   .tarjeta-precio { @include tarjeta-base(40px); position: relative; // tarjeta blanca con padding 40px
-    &:hover { border-color: $color-arcilla; box-shadow: 0 20px 40px -10px rgba($color-arcilla,0.2); } // hover coral
-    .insignia-precio { position: absolute; top: -16px; right: -16px; background: $color-arcilla; color: #fff; font-size: 12px; padding: 4px 12px; border-radius: $radio-pill; } // badge "popular" coral
+    &:hover { border-color: $color-arcilla; box-shadow: 0 20px 40px -10px $arcilla-opaco-2; } // hover coral
+    .insignia-precio { position: absolute; top: -16px; right: -16px; background: $color-arcilla; color: $color-blanco; font-size: 12px; padding: 4px 12px; border-radius: $radio-pill; } // badge "popular" coral
     h3 { @include titulo-tarjeta; margin-bottom: 8px; } // título tarjeta
     .sub-precio { font-size: 14px; color: $color-texto-tarjeta-suave; margin-bottom: 24px; } // subtítulo
-    .valor-precio { font-family: $fuente-serif; font-size: 36px; color: $color-bosque; margin-bottom: 24px; span { font-size: 16px; color: $color-texto-tarjeta-suave; font-family: $fuente-sans; } } // precio grande serif
-    .lista-precio { list-style: none; margin-bottom: 32px; li { font-size: 14px; color: $color-texto-tarjeta-suave; margin-bottom: 12px; @include flex(row, center, flex-start, 8px); i { color: $color-musgo; } } .deshabilitado { opacity: 0.5; } .deshabilitado i { color: #ccc; } } // lista de características
+    .valor-precio { font-family: $fuente-serif; font-size: 36px; color: $color-bosque; margin-bottom: 24px; span { font-size: 16px; color: $color-texto-tarjeta-suave; } } // precio grande serif
+    .lista-precio { list-style: none; margin-bottom: 32px; li { font-size: 14px; color: $color-texto-tarjeta-suave; margin-bottom: 12px; @include flex(row, center, flex-start, 8px); } .deshabilitado { opacity: 0.5; } } // lista de características
   }
 }
 // plan destacado
@@ -244,7 +235,7 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 // comparativa (beneficios.html)
 .tarjeta-comparativa { @include tarjeta-base($borde: none); border-left: 4px solid $color-borde; // tarjeta con borde izquierdo
   h3 { @include titulo-tarjeta; margin-bottom: 24px; } // título
-  ul li { @include flex(row, flex-start, flex-start, 12px); margin-bottom: 16px; font-size: 14px; color: $color-texto-tarjeta-suave; i { margin-top: 4px; } } // ítem con icono
+  ul li { @include flex(row, flex-start, flex-start, 12px); margin-bottom: 16px; font-size: 14px; color: $color-texto-tarjeta-suave; img { margin-top: 4px; } } // ítem con icono
 }
 .activa { border-color: $color-arcilla; } // variante coral activa
 .tarjeta-comparativa .ic-tenue-titulo { color: $color-tinta-suave; } // título en gris
@@ -288,7 +279,7 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
   @include seccion-oscura; padding: 64px 48px; border-radius: 24px; text-align: center; position: relative; overflow: hidden; // bloque oscuro con padding amplio
   h2 { margin-bottom: 16px; } // separación inferior
   p { opacity: 0.7; margin: 0 auto 32px; max-width: 400px; } // texto semitransparente centrado
-  .bloque-cta__icono { @include circulo(64px); background: rgba($color-arcilla,0.2); border: 1px solid $color-arcilla; margin: 0 auto 24px; color: $color-arcilla; font-size: 24px; } // icono circular coral
+  .bloque-cta__icono { @include circulo(64px); background: $arcilla-opaco-2; border: 1px solid $color-arcilla; margin: 0 auto 24px; color: $color-arcilla; font-size: 24px; } // icono circular coral
 }
 
 // cita de caso de uso (como-funciona.html)
@@ -306,12 +297,10 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
   p { opacity: 0.8; font-size: 14px; margin-bottom: 24px; } // descripción
 }
 .item-contacto { @include flex(row, flex-start, flex-start, 12px); margin-bottom: 16px; font-size: 14px; color: $color-tinta-suave; // ítem de contacto con icono
-  i { margin-top: 4px; font-size: 18px; } // icono
+  img { margin-top: 4px; } // icono
   strong { display: block; color: $color-tinta; font-weight: 500; } // etiqueta
 }
-.caja-aviso { background: rgba($color-arcilla,.2); border: 1px solid $color-arcilla; padding: 16px; border-radius: 12px; @include flex(row, center, flex-start, 12px); font-size: 12px; // aviso coral
-  i { color: $color-arcilla; font-size: 18px; } // icono coral
-}
+.caja-aviso { background: $arcilla-opaco-2; border: 1px solid $color-arcilla; padding: 16px; border-radius: $radio-12; @include flex(row, center, flex-start, 12px); font-size: 12px; } // aviso coral
 .nota-formulario { font-size: 12px; opacity: 0.6; margin-bottom: 16px; } // nota pequeña
 .malla-2--contacto { grid-template-columns: 1.4fr 1fr; } // grid 2 columnas asimétricas para contacto
 .malla-2--form { grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; } // grid 2 columnas para formulario
@@ -367,9 +356,8 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
   .num-seccion {
     @include circulo(32px); // círculo de 32px
     background: $color-bosque; // fondo verde
-    color: #FFFFFF; // texto blanco
+    color: $color-blanco; // texto blanco
     font-size: 14px;
-    font-family: $fuente-sans;
     font-weight: 600;
   }
 }
@@ -395,7 +383,7 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
     @include circulo(64px); // círculo 64px
     margin: 0 auto;
     background: $color-bosque; // fondo verde
-    color: #FFFFFF;
+    color: $color-blanco;
     font-size: 24px;
   }
   .conector-texto {
@@ -423,14 +411,13 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
     .ia-badge {
       @include flex(row, center, flex-start, 8px, inline-flex); // inline-flex con gap
       padding: 6px 16px;
-      background: rgba($color-bosque, 0.1); // fondo verde sutil
+      background: $bosque-opaco-1; // fondo verde sutil
       border-radius: $radio-pill; // pill
       @include label-text(11px);
       font-weight: 700;
       color: $color-bosque;
       margin-bottom: 16px;
 
-      i { font-size: 14px; } // icono
     }
     h3 { font-family: $fuente-serif; font-size: 26px; color: $color-texto-tarjeta; margin-bottom: 8px; } // título serif
     p { font-size: 14px; color: $color-texto-tarjeta-suave; } // descripción
@@ -450,9 +437,9 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
     &.sin-borde { border-bottom: none; } // último sin borde
 
     .menu-icono {
-      width: 48px; height: 48px; border-radius: 12px;
+      width: 48px; height: 48px; border-radius: $radio-12;
       background: $color-seccion; // fondo crema
-      display: flex; align-items: center; justify-content: center;
+      @include flex(row, center, center);
       font-size: 18px; color: $color-bosque;
     }
     .menu-contenido {
@@ -474,13 +461,13 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
   gap: 16px;
   margin-top: 24px;
   padding-top: 24px;
-  border-top: 2px solid rgba($color-bosque, 0.1); // borde superior
+  border-top: 2px solid $bosque-opaco-1; // borde superior
 
   .nutricion-item {
     text-align: center;
     padding: 16px;
     background: $color-seccion; // fondo crema
-    border-radius: 16px;
+    border-radius: $radio-16;
 
     .nutricion-num { font-family: $fuente-serif; font-size: 28px; color: $color-bosque; font-weight: 600; } // número
     .nutricion-label { @include label-text(11px); color: $color-texto-tarjeta-suave; margin-top: 4px; } // etiqueta
@@ -496,7 +483,7 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 
 // cta claro (demo)
 .demo-cta-claro {
-  background: rgba($color-arcilla, 0.06); // fondo arcilla sutil
+  background: $arcilla-opaco-06; // fondo arcilla sutil
   color: $color-tinta; // texto oscuro
   text-align: center;
 
@@ -513,9 +500,9 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
   text-align: center;
   margin-top: 32px;
   padding: 20px;
-  background: rgba($color-arcilla, 0.1); // fondo coral sutil
+  background: $arcilla-opaco-1; // fondo coral sutil
   border: 1px solid rgba($color-arcilla, 0.3); // borde coral
-  border-radius: 16px;
+  border-radius: $radio-16;
   font-size: 14px;
   color: $color-tinta-suave;
 
@@ -523,7 +510,7 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 }
 
 // gestión nutricional (demo.html)
-.gestion-nutricional { background: rgba($color-arcilla, 0.06); padding: 80px 0; }
+.gestion-nutricional { background: $arcilla-opaco-06; padding: 80px 0; }
 
 // contenedor flex de notas + logros
 .contenido-superior { @include flex(row, flex-start, center, 48px); flex-wrap: wrap; } // fila con gap grande
@@ -570,8 +557,8 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 
 // insignias de logros
 .insignias { @include flex(row, center, center, 12px); flex-wrap: wrap; // fila centrada con wrap
-  span { background: $color-crema; padding: 10px 16px; border-radius: 12px; border: $borde-sutil; box-shadow: $sombra-suave; font-weight: 600; font-size: 13px; color: $color-texto-tarjeta; transition: background 0.2s, color 0.2s; // badge blanco con sombra
-    &:hover { background: $color-bosque; color: #FFFFFF; } // hover verde
+  span { background: $color-crema; padding: 10px 16px; border-radius: $radio-12; border: $borde-sutil; box-shadow: $sombra-suave; font-weight: 600; font-size: 13px; color: $color-texto-tarjeta; transition: background 0.2s, color 0.2s; // badge blanco con sombra
+    &:hover { background: $color-bosque; color: $color-blanco; } // hover verde
   }
 }
 
@@ -589,7 +576,7 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
   // header del acordeón
   summary {
     padding: 16px 24px; cursor: pointer; font-weight: 600; font-size: 16px; // padding, puntero, semi-bold
-    color: #FFFFFF; background: linear-gradient(90deg, $color-bosque, $color-bosque-profundo);
+    color: $color-blanco; background: linear-gradient(90deg, $color-bosque, $color-bosque-profundo);
     list-style: none; // sin triángulo
   }
 
@@ -620,15 +607,15 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
   overflow: hidden; // oculta desbordamiento
 
   .logo-claro {
-    display: flex; align-items: center; gap: 8px; position: relative; z-index: 2; margin-bottom: 24px; // logo encima del overlay
-    span { font-family: $fuente-serif; font-size: 20px; color: #FFFFFF; } // texto logo blanco
+    @include flex(row, center, flex-start, 8px); position: relative; z-index: 2; margin-bottom: 24px; // logo encima del overlay
+    span { font-family: $fuente-serif; font-size: 20px; color: $color-blanco; } // texto logo blanco
   }
 
   .imagen-visual {
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover; // cubre sin deformar
-    border-radius: 16px;
+    border-radius: $radio-16;
     margin-bottom: 24px;
     box-shadow: 0 20px 40px -10px rgba(0,0,0,0.3); // sombra oscura
   }
@@ -668,12 +655,9 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 
   .boton-social {
     @include flex(row, center, center, 12px); padding: 12px;
-    border-radius: 12px; border: 1px solid rgba($color-bosque, 0.15); cursor: pointer; // borde sutil
+    border-radius: $radio-12; border: 1px solid $bosque-opaco-15; cursor: pointer; // borde sutil
     font-size: 14px; font-weight: 500; color: $color-tinta; background: $color-crema; // texto oscuro, fondo blanco
     &:hover { background: $color-papel; border-color: $color-arcilla; transition: background 0.2s, border-color 0.2s; } // hover con borde coral
-    i { font-size: 18px; } // icono
-    &.google i { color: #DB4437; } // google rojo
-    &.facebook i { color: #1877F2; } // facebook azul
   }
 
   .enlace-inferior {
@@ -702,12 +686,12 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 
     input, select {
       width: 100%; padding: 14px 14px 14px 44px;
-      border: 1px solid $color-borde; border-radius: 12px; // borde sutil
-      font-size: 15px; font-family: $fuente-sans; color: $color-texto-tarjeta; // tipografía
+      border: 1px solid $color-borde; border-radius: $radio-12; // borde sutil
+      font-size: 15px; color: $color-texto-tarjeta; // tipografía
       background: $color-crema; box-sizing: border-box; transition: 0.2s; // fondo blanco
       &:focus {
         outline: none; border-color: $color-bosque; // borde verde al focus
-        box-shadow: 0 0 0 4px rgba($color-bosque, 0.15); // glow verde
+        box-shadow: 0 0 0 4px $bosque-opaco-15; // glow verde
       }
     }
   }
@@ -723,18 +707,17 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
 
   .food-card {
     @include flex(column, stretch, space-between); // columna, espacio entre
-    background: $color-crema; border: $borde-suave; border-radius: 16px; // fondo blanco, borde sutil
+    background: $color-crema; border: $borde-suave; border-radius: $radio-16; // fondo blanco, borde sutil
     padding: 22px; box-shadow: $sombra-suave; transition: 0.3s; // sombra, transición
-    &:hover { transform: translateY(-4px); border-color: rgba($color-bosque, 0.2); } // hover levanta
+    &:hover { transform: translateY(-4px); border-color: $bosque-opaco-2; } // hover levanta
   }
 
-  .food-title { font-weight: 700; font-size: 20px; color: $color-bosque-profundo; margin-bottom: 4px;
-    i { color: $color-bosque; } } // icono verde
+  .food-title { font-weight: 700; font-size: 20px; color: $color-bosque-profundo; margin-bottom: 4px; } // título
   .food-category { @include label-text(13px); color: $color-texto-tarjeta-suave; margin-bottom: 15px; } // categoría uppercase
 
   .ig-badge {
     align-self: flex-start; padding: 6px 14px; border-radius: $radio-pill; // badge pill
-    color: #fff; font-weight: 700; font-size: 12px; letter-spacing: 0.5px;
+    color: $color-blanco; font-weight: 700; font-size: 12px; letter-spacing: 0.5px;
     text-transform: uppercase; margin-bottom: 15px;
   }
   .ig-bajo  { background: $color-ig-bajo; } // badge verde
@@ -744,6 +727,6 @@ h1 em, h2 em { color: $color-arcilla; font-style: italic; } // énfasis coral en
   .exchange-box, .safe-box {
     padding: 12px 15px; border-radius: 8px; font-size: 14px; line-height: 1.4; color: $color-tinta; // caja informativa
   }
-  .exchange-box { background: rgba($color-arcilla, 0.12); border-left: 4px solid $color-arcilla; } // caja coral
+  .exchange-box { background: $arcilla-opaco-12; border-left: 4px solid $color-arcilla; } // caja coral
   .safe-box     { background: rgba($color-bosque, 0.12);  border-left: 4px solid $color-bosque; } // caja verde
 }

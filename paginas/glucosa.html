@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Índice Glucémico — VITALIS</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="../estilos/estilos.css">
+
 </head>
 <body>
 
 <header class="encabezado">
   <div class="contenedor contenedor-nav">
     <a href="../index.html" class="logo">
-      <img src="../recursos/imagenes/logo.svg" width="28" height="28" alt="Vitalis">
+      <img src="../recursos/imagenes/iconos/logo/logo.svg" width="28" height="28" alt="Vitalis">
       <span class="fuente-serif">VITALIS</span>
     </a>
     <nav class="enlaces-nav">
@@ -23,7 +23,7 @@
       <a href="demo.html">Demo</a>
       <a href="contacto.html">Contacto</a>
     </nav>
-    <a href="login.html" class="boton-iniciar-sesion">Iniciar Sesión <i class="fas fa-arrow-right"></i></a>
+    <a href="login.html" class="boton-iniciar-sesion">Iniciar Sesión <img src="../recursos/imagenes/iconos/header/i-arrow-right-header.svg" width="14" height="14" alt="→"></a>
   </div>
 </header>
 
@@ -41,11 +41,11 @@
     <div class="glucosa-panel">
       <div class="search-section">
         <span class="input-group">
-          <i class="fas fa-magnifying-glass input-icon"></i>
+          <img src="../recursos/imagenes/iconos/default/i-magnifying-glass.svg" width="16" height="16" alt="Buscar" class="input-icon" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);pointer-events:none">
           <input type="text" id="searchInput" placeholder="Ej. Pan, Plátano, Espinaca..." onkeyup="filtrarAlimentos()">
         </span>
         <span class="select-group">
-          <i class="fas fa-folder-open input-icon"></i>
+          <img src="../recursos/imagenes/iconos/default/i-folder-open.svg" width="16" height="16" alt="Categoría" class="input-icon" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);pointer-events:none">
           <select id="categorySelect" onchange="filtrarAlimentos()">
             <option value="Todos">Todas las categorías</option>
             <option value="Carbohidratos">Carbohidratos</option>

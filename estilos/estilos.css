@@ -216,11 +216,6 @@
 .tarjeta:hover {
   box-shadow: 0 20px 40px -10px rgba(0, 206, 200, 0.15);
 }
-.tarjeta i {
-  font-size: 24px;
-  color: #E8916A;
-  margin-bottom: 20px;
-}
 .tarjeta h3 {
   font-size: 22px;
   color: #1C2D32;
@@ -239,6 +234,9 @@
   box-shadow: 0 5px 15px rgba(0, 206, 200, 0.05);
   display: flex;
   flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0;
 }
 .tarjeta-servicio .envoltura-img {
   aspect-ratio: 4/3;
@@ -254,6 +252,9 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0;
 }
 .tarjeta-servicio .num-servicio {
   font-size: 12px;
@@ -329,7 +330,6 @@ table td {
   width: 100%;
   border: 1px solid rgba(0, 206, 200, 0.2);
   border-radius: 12px;
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   outline: none;
 }
 .formulario-entrada:focus {
@@ -340,30 +340,6 @@ table td {
   padding: 14px 16px;
   font-size: 15px;
   color: #1C2D32;
-}
-
-.ic-musgo {
-  color: #5E8A8F;
-}
-
-.ic-arcilla {
-  color: #E8916A;
-}
-
-.ic-bosque {
-  color: #00CEC8;
-}
-
-.ic-tenue {
-  color: #bbb;
-}
-
-.ic-wa {
-  color: #25D366;
-}
-
-.ic-grande {
-  font-size: 18px;
 }
 
 .contenedor--600 {
@@ -420,17 +396,6 @@ table td {
   color: #1C2D32;
   font-size: 20px;
 }
-.circulo-icono i {
-  line-height: 1;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  width: 100%;
-  height: 100%;
-}
 
 .circulo-icono--sm {
   width: 48px;
@@ -450,19 +415,11 @@ table td {
   align-items: center;
   gap: 12px;
 }
-.demo-select-wrapper .demo-select-icono {
-  font-size: 20px;
-  color: #E8916A;
-  flex-shrink: 0;
-  width: 24px;
-  text-align: center;
-}
 .demo-select-wrapper select {
   width: 100%;
   padding: 14px 40px 14px 16px;
   border: 1px solid rgba(0, 206, 200, 0.2);
   border-radius: 12px;
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 15px;
   color: #1C2D32;
   background: #FFFFFF;
@@ -473,15 +430,6 @@ table td {
 }
 .demo-select-wrapper select:focus {
   border-color: #E8916A;
-}
-.demo-select-wrapper .demo-select-flecha {
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #4A5D5A;
-  font-size: 12px;
-  pointer-events: none;
 }
 
 .demo-checkbox-grid {
@@ -505,11 +453,6 @@ table td {
   accent-color: #00CEC8;
   width: 16px;
   height: 16px;
-  flex-shrink: 0;
-}
-.demo-checkbox-grid .demo-checkbox-item i {
-  font-size: 16px;
-  color: #E8916A;
   flex-shrink: 0;
 }
 .demo-checkbox-grid .demo-checkbox-item h4 {
@@ -551,6 +494,11 @@ body {
 img {
   max-width: 100%;
   display: block;
+}
+
+img[src*="/iconos/"] {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 a {
@@ -705,13 +653,6 @@ h1 em, h2 em {
   gap: 24px;
   flex-wrap: wrap;
   margin-bottom: 64px;
-}
-.heroe .estadisticas {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  max-width: 600px;
-  margin: 0 auto;
 }
 
 .malla-2--filosofia {
@@ -939,7 +880,7 @@ h1 em, h2 em {
   top: -16px;
   right: -16px;
   background: #E8916A;
-  color: #fff;
+  color: #FFFFFF;
   font-size: 12px;
   padding: 4px 12px;
   border-radius: 999px;
@@ -964,7 +905,6 @@ h1 em, h2 em {
 .malla-precios .tarjeta-precio .valor-precio span {
   font-size: 16px;
   color: #4A5D5A;
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 .malla-precios .tarjeta-precio .lista-precio {
   list-style: none;
@@ -980,14 +920,8 @@ h1 em, h2 em {
   justify-content: flex-start;
   gap: 8px;
 }
-.malla-precios .tarjeta-precio .lista-precio li i {
-  color: #5E8A8F;
-}
 .malla-precios .tarjeta-precio .lista-precio .deshabilitado {
   opacity: 0.5;
-}
-.malla-precios .tarjeta-precio .lista-precio .deshabilitado i {
-  color: #ccc;
 }
 
 .destacada {
@@ -1094,7 +1028,7 @@ h1 em, h2 em {
   font-size: 14px;
   color: #4A5D5A;
 }
-.tarjeta-comparativa ul li i {
+.tarjeta-comparativa ul li img {
   margin-top: 4px;
 }
 
@@ -1313,9 +1247,8 @@ h1 em, h2 em {
   font-size: 14px;
   color: #4A5D5A;
 }
-.item-contacto i {
+.item-contacto img {
   margin-top: 4px;
-  font-size: 18px;
 }
 .item-contacto strong {
   display: block;
@@ -1334,10 +1267,6 @@ h1 em, h2 em {
   justify-content: flex-start;
   gap: 12px;
   font-size: 12px;
-}
-.caja-aviso i {
-  color: #E8916A;
-  font-size: 18px;
 }
 
 .nota-formulario {
@@ -1422,7 +1351,6 @@ h1 em, h2 em {
   background: #00CEC8;
   color: #FFFFFF;
   font-size: 14px;
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: 600;
 }
 
@@ -1491,9 +1419,6 @@ h1 em, h2 em {
   color: #00CEC8;
   margin-bottom: 16px;
 }
-.demo-resultado .resultado-header .ia-badge i {
-  font-size: 14px;
-}
 .demo-resultado .resultado-header h3 {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 26px;
@@ -1522,8 +1447,10 @@ h1 em, h2 em {
   border-radius: 12px;
   background: #D8E0E5;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 0;
   font-size: 18px;
   color: #00CEC8;
 }
@@ -1801,7 +1728,9 @@ h1 em, h2 em {
 }
 .lado-visual .logo-claro {
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: flex-start;
   gap: 8px;
   position: relative;
   z-index: 2;
@@ -1914,15 +1843,6 @@ h1 em, h2 em {
   border-color: #E8916A;
   transition: background 0.2s, border-color 0.2s;
 }
-.lado-formulario .boton-social i {
-  font-size: 18px;
-}
-.lado-formulario .boton-social.google i {
-  color: #DB4437;
-}
-.lado-formulario .boton-social.facebook i {
-  color: #1877F2;
-}
 .lado-formulario .enlace-inferior {
   text-align: center;
   margin-top: 32px;
@@ -1968,7 +1888,6 @@ h1 em, h2 em {
   border: 1px solid #C5D5D9;
   border-radius: 12px;
   font-size: 15px;
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: #1C2D32;
   background: #FFFFFF;
   box-sizing: border-box;
@@ -2011,9 +1930,6 @@ h1 em, h2 em {
   color: #0D2229;
   margin-bottom: 4px;
 }
-.seccion-glucosa .food-title i {
-  color: #00CEC8;
-}
 .seccion-glucosa .food-category {
   font-size: 13px;
   text-transform: uppercase;
@@ -2025,7 +1941,7 @@ h1 em, h2 em {
   align-self: flex-start;
   padding: 6px 14px;
   border-radius: 999px;
-  color: #fff;
+  color: #FFFFFF;
   font-weight: 700;
   font-size: 12px;
   letter-spacing: 0.5px;

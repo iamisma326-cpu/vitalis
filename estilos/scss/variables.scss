@@ -31,6 +31,22 @@ $borde-suave:   1px solid rgba($color-bosque, 0.05);
 // sombras
 $sombra-suave: 0 10px 30px -15px rgba($color-bosque, 0.1);
 
+// blanco
+$color-blanco: #FFFFFF;
+
+// radios reutilizables
+$radio-12: 12px;
+$radio-16: 16px;
+
+// opacidades semánticas
+$bosque-opaco-15: rgba($color-bosque, 0.15);
+$bosque-opaco-2: rgba($color-bosque, 0.2);
+$bosque-opaco-1: rgba($color-bosque, 0.1);
+$arcilla-opaco-2: rgba($color-arcilla, 0.2);
+$arcilla-opaco-06: rgba($color-arcilla, 0.06);
+$arcilla-opaco-1: rgba($color-arcilla, 0.1);
+$arcilla-opaco-12: rgba($color-arcilla, 0.12);
+
 // tamaños y radios
 $radio-borde-grande: 24px;
 $radio-pill: 999px;
