@@ -1,0 +1,177 @@
+// MENUIA.SCSS — Estilos del generador de menú IA (demo.html)
+
+// Hero de la demo
+.demo-hero {
+  padding: 100px 0 40px;    // Espaciado vertical del hero
+  text-align: center;        // Centrado
+}
+.demo-hero h1 {
+  margin-bottom: 16px;
+}
+.demo-hero p {
+  font-size: 18px;
+  color: $color-tinta-suave;
+  max-width: 600px;           // Ancho máximo
+  margin: 0 auto;
+}
+
+// Caja contenedora del formulario y del resultado
+.demo-contenedor,
+.demo-resultado {
+  max-width: 800px;           // Ancho máximo
+  margin: 0 auto;
+  background: $color-blanco;
+  border-radius: 24px;
+  padding: 48px;              // Padding interno
+  box-shadow: $sombra-suave;  // Sombra
+}
+
+// Texto auxiliar sobre los campos
+.demo-leyenda {
+  @include label-text;        // Mixin: mayúsculas + tracking
+  color: $color-tinta-suave;
+  margin-bottom: 16px;
+}
+
+// Cada bloque del formulario
+.demo-seccion {
+  border: none;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+}
+.demo-seccion--ultima {
+  border-bottom: none;
+}
+
+// Título de cada bloque con número
+.demo-titulo-seccion {
+  font-family: $fuente-serif;
+  font-size: 20px;
+  color: $color-tinta;
+  margin-bottom: 16px;
+  @include flex(row, center, flex-start, 12px);  // Mixin: flex fila
+}
+.num-seccion {
+  @include circulo(32px);     // Mixin: círculo 32px
+  background: $color-bosque;
+  color: $color-blanco;
+  font-size: $fs-14;
+  font-weight: 600;
+}
+
+// <details> que envuelve conector + resultado
+.demo-details {
+  max-width: 800px;
+  margin: 32px auto 64px;
+}
+.demo-details summary {
+  cursor: pointer;               // Cursor clickeable
+  list-style: none;             // Sin triángulo nativo
+}
+
+// Conector visual: muestra el estado de la generación IA
+.demo-conector {
+  text-align: center;
+  margin: 48px 0;
+}
+.conector-icono {
+  @include circulo(64px);      // Mixin: círculo 64px
+  margin: 0 auto;
+  background: $color-bosque;
+  color: $color-blanco;
+  font-size: 24px;
+}
+.conector-texto {
+  margin-top: 12px;
+  @include label-text(14px);   // Mixin: label-text 14px
+  color: $color-tinta-suave;
+  font-weight: 600;
+}
+.conector-subtexto {
+  margin-top: 4px;
+  font-size: 12px;
+  color: $color-tinta-suave;
+  opacity: 0.6;                // Atenuado
+}
+
+// Estado de error en el conector
+.demo-conector.error .conector-icono {
+  background: $color-arcilla;  // Error
+}
+.demo-conector.error .conector-subtexto {
+  color: $color-arcilla;
+  opacity: 1;
+}
+
+// Textarea de solo lectura con el menú generado
+.ia-textarea-menu {
+  width: 100%;
+  min-height: 300px;            // Altura mínima
+  background: $color-papel;
+  border: 1px solid $color-borde;
+  border-radius: $radio-12;
+  padding: 24px;                // Padding
+  font-family: $fuente-sans;
+  font-size: $fs-14;
+  color: $color-tinta;
+  line-height: 1.7;             // Interlineado
+  resize: vertical;            // Redimensionable vertical
+}
+
+// <select> personalizado con icono
+.demo-select-wrapper {
+  position: relative;           // Para posicionar iconos
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.demo-select-wrapper select {
+  width: 100%;
+  padding: 14px 40px 14px 16px; // 40px der. para flecha
+  border: 1px solid $bosque-opaco-2;
+  border-radius: $radio-12;
+  font-size: 15px;
+  color: $color-tinta;
+  background: $color-blanco;
+  cursor: pointer;              // Cursor clickeable
+  outline: none;                // Sin borde focus nativo
+  appearance: none;               // Sin estilo nativo
+  transition: border-color 0.2s; // Transición suave
+}
+.demo-select-wrapper select:focus {
+  border-color: $color-arcilla; // Foco color arcilla
+}
+
+// Checkboxes tipo chip para selección de alimentos
+.demo-checkbox-grid {
+  display: flex;
+  flex-wrap: wrap;               // Salto de línea
+  gap: 10px;
+}
+.demo-checkbox-item {
+  display: inline-flex;          // Ajustado al contenido
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid $bosque-opaco-15;
+  border-radius: $radio-12;
+  cursor: pointer;              // Cursor clickeable
+  transition: border-color 0.2s, background 0.2s; // Transición hover
+  background: $color-blanco;
+  user-select: none;             // Sin selección texto
+}
+.demo-checkbox-item input {
+  accent-color: $color-bosque;   // Color checkbox nativo
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;                // No se encoge
+}
+.demo-checkbox-item h4 {
+  font-size: $fs-14;
+  color: $color-tinta;
+  font-weight: 500;
+}
+.demo-checkbox-item:hover {
+  border-color: $color-arcilla;
+  background: rgba($color-arcilla, 0.04); // Fondo hover
+}

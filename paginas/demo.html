@@ -17,17 +17,15 @@
     </a>
     <nav class="enlaces-nav">
       <a href="../index.html">Inicio</a>
-      <a href="beneficios.html">Beneficios</a>
       <a href="servicios.html">Funcionalidades</a>
-      <a href="como-funciona.html">Cómo Funciona</a>
-      <a href="demo.html" class="activa">Demo</a>
+      <a href="testimonios.html">Testimonios</a>
       <a href="contacto.html">Contacto</a>
     </nav>
-    <a href="login.html" class="boton-iniciar-sesion">Iniciar Sesión <img src="../recursos/imagenes/iconos/header/i-arrow-right-header.svg" width="14" height="14" alt="→"></a>
+    <a href="demo.html" class="boton-iniciar-sesion">Probar Gratis <img src="../recursos/imagenes/iconos/header/i-arrow-right-header.svg" width="14" height="14" alt="→"></a>
   </div>
 </header>
 
-<!-- hero demo -->
+<!-- INICIO: Hero demo IA -->
 <section class="demo-hero">
   <div class="contenedor">
     <div class="pastilla">Demo Interactiva</div>
@@ -35,15 +33,16 @@
     <p>Completa este breve formulario y descubre cómo la IA Mistral diseñaría tu plan nutricional en segundos.</p>
   </div>
 </section>
+<!-- FIN: Hero demo IA -->
 
-<!-- formulario demo -->
+<!-- INICIO: Formulario generador menú IA -->
 <section class="seccion--sin-top">
   <div class="contenedor">
     <form class="demo-contenedor" action="#" method="POST" id="demo-form">
 
       <!-- pregunta 1 -->
-      <fieldset class="demo-seccion">
-        <legend class="demo-titulo-seccion"><span class="num-seccion">1</span> ¿Qué tipo de diabetes tienes?</legend>
+      <div class="demo-seccion">
+        <p class="demo-titulo-seccion"><span class="num-seccion">1</span> ¿Qué tipo de diabetes tienes?</p>
         <div class="demo-select-wrapper">
           <img src="../recursos/imagenes/iconos/arcilla/i-syringe-arcilla.svg" width="20" height="20" alt="Diabetes">
           <select name="diabetes" required>
@@ -54,11 +53,11 @@
           </select>
           <img src="../recursos/imagenes/iconos/default/i-chevron-down.svg" width="12" height="12" alt="▼">
         </div>
-      </fieldset>
+      </div>
 
       <!-- pregunta 2 -->
-      <fieldset class="demo-seccion">
-        <legend class="demo-titulo-seccion"><span class="num-seccion">2</span> ¿Cuál es tu objetivo principal?</legend>
+      <div class="demo-seccion">
+        <p class="demo-titulo-seccion"><span class="num-seccion">2</span> ¿Cuál es tu objetivo principal?</p>
         <div class="demo-select-wrapper">
           <img src="../recursos/imagenes/iconos/arcilla/i-bullseye-arcilla.svg" width="20" height="20" alt="Objetivo">
           <select name="objetivo" required>
@@ -70,11 +69,11 @@
           </select>
           <img src="../recursos/imagenes/iconos/default/i-chevron-down.svg" width="12" height="12" alt="▼">
         </div>
-      </fieldset>
+      </div>
 
       <!-- pregunta 3 -->
-      <fieldset class="demo-seccion">
-        <legend class="demo-titulo-seccion"><span class="num-seccion">3</span> ¿Cuál es tu nivel de actividad física?</legend>
+      <div class="demo-seccion">
+        <p class="demo-titulo-seccion"><span class="num-seccion">3</span> ¿Cuál es tu nivel de actividad física?</p>
         <div class="demo-select-wrapper">
           <img src="../recursos/imagenes/iconos/arcilla/i-heart-pulse-arcilla.svg" width="20" height="20" alt="Actividad">
           <select name="actividad" required>
@@ -85,11 +84,11 @@
           </select>
           <img src="../recursos/imagenes/iconos/default/i-chevron-down.svg" width="12" height="12" alt="▼">
         </div>
-      </fieldset>
+      </div>
 
       <!-- pregunta 4 -->
-      <fieldset class="demo-seccion">
-        <legend class="demo-titulo-seccion"><span class="num-seccion">4</span> ¿Tienes alguna restricción alimentaria?</legend>
+      <div class="demo-seccion">
+        <p class="demo-titulo-seccion"><span class="num-seccion">4</span> ¿Tienes alguna restricción alimentaria?</p>
         <div class="demo-select-wrapper">
           <img src="../recursos/imagenes/iconos/arcilla/i-ban-arcilla.svg" width="20" height="20" alt="Restricción">
           <select name="restriccion" required>
@@ -103,11 +102,11 @@
           </select>
           <img src="../recursos/imagenes/iconos/default/i-chevron-down.svg" width="12" height="12" alt="▼">
         </div>
-      </fieldset>
+      </div>
 
       <!-- pregunta 5 -->
-      <fieldset class="demo-seccion">
-        <legend class="demo-titulo-seccion"><span class="num-seccion">5</span> ¿Qué alimentos prefieres consumir?</legend>
+      <div class="demo-seccion">
+        <p class="demo-titulo-seccion"><span class="num-seccion">5</span> ¿Qué alimentos prefieres consumir?</p>
         <p class="demo-leyenda">Selección múltiple</p>
         <div class="demo-checkbox-grid">
           <label class="demo-checkbox-item">
@@ -151,11 +150,11 @@
             <h4>Lácteos</h4>
           </label>
         </div>
-      </fieldset>
+      </div>
 
       <!-- pregunta 6 -->
-      <fieldset class="demo-seccion demo-seccion--ultima">
-        <legend class="demo-titulo-seccion"><span class="num-seccion">6</span> ¿Cuántas comidas deseas realizar al día?</legend>
+      <div class="demo-seccion demo-seccion--ultima">
+        <p class="demo-titulo-seccion"><span class="num-seccion">6</span> ¿Cuántas comidas deseas realizar al día?</p>
         <div class="demo-select-wrapper">
           <img src="../recursos/imagenes/iconos/arcilla/i-utensils-arcilla.svg" width="20" height="20" alt="Comidas">
           <select name="comidas" required>
@@ -167,20 +166,27 @@
           </select>
           <img src="../recursos/imagenes/iconos/default/i-chevron-down.svg" width="12" height="12" alt="▼">
         </div>
-      </fieldset>
+      </div>
 
     </form>
   </div>
 </section>
+<!-- FIN: Formulario generador menú IA -->
 
-<details class="demo-details">
-<summary class="boton boton-primario boton-bloque">
+<!-- INICIO: Conector + resultado menú IA -->
+<details class="demo-details" id="demo-details">
+  <!--
+    <details> crea un bloque expandible/colapsable.
+    <summary> es su título visible; al hacer clic se abre o cierra.
+    El JS (demo.js) lo abre automáticamente al generar el menú.
+  -->
+<summary class="boton boton-primario boton-bloque" id="ia-generar">
   <img src="../recursos/imagenes/iconos/primario/i-microchip-primary.svg" width="16" height="16" alt="IA">
   Generar Menú IA
 </summary>
 
 <!-- conector animado -->
-<div class="demo-conector">
+<div class="demo-conector" id="ia-conector">
   <div class="conector-icono"><img src="../recursos/imagenes/iconos/primario/i-microchip-primary.svg" width="24" height="24" alt="IA"></div>
   <div class="conector-texto">IA Mistral Procesando</div>
   <div class="conector-subtexto">Variables analizadas en segundos</div>
@@ -189,198 +195,17 @@
 <!-- resultado / preview -->
 <section class="seccion--sin-top">
   <div class="contenedor">
-    <div class="demo-resultado">
-      <div class="resultado-header">
-        <div class="ia-badge"><img src="../recursos/imagenes/iconos/arcilla/i-microchip-arcilla.svg" width="16" height="16" alt="IA"> Generado por IA Mistral</div>
-        <h3>Menú de Ejemplo — Día 1</h3>
-        <p>Basado en tus preferencias seleccionadas</p>
-      </div>
-
-      <div class="demo-menu">
-        <!-- desayuno -->
-        <div class="demo-menu-item">
-          <div class="menu-icono"><img src="../recursos/imagenes/iconos/arcilla/i-sun-arcilla.svg" width="20" height="20" alt="Desayuno"></div>
-          <div class="menu-contenido">
-            <h4>Desayuno · 8:00 AM</h4>
-            <p>Avena con frutos rojos, almendras y canela</p>
-          </div>
-          <div class="menu-nutricion">
-            <div class="cho">35g CHO</div>
-            <div class="ig">IG: 42 (Bajo)</div>
-          </div>
-        </div>
-
-        <!-- colación 1 -->
-        <div class="demo-menu-item">
-          <div class="menu-icono"><img src="../recursos/imagenes/iconos/arcilla/i-apple-whole-arcilla.svg" width="20" height="20" alt="Colación"></div>
-          <div class="menu-contenido">
-            <h4>Colación · 11:00 AM</h4>
-            <p>Yogur griego natural con semillas de chía</p>
-          </div>
-          <div class="menu-nutricion">
-            <div class="cho">12g CHO</div>
-            <div class="ig">IG: 28 (Bajo)</div>
-          </div>
-        </div>
-
-        <!-- almuerzo -->
-        <div class="demo-menu-item">
-          <div class="menu-icono"><img src="../recursos/imagenes/iconos/arcilla/i-cloud-sun-arcilla.svg" width="20" height="20" alt="Almuerzo"></div>
-          <div class="menu-contenido">
-            <h4>Almuerzo · 1:00 PM</h4>
-            <p>Ensalada de lentejas con verduras asadas y aguacate</p>
-          </div>
-          <div class="menu-nutricion">
-            <div class="cho">45g CHO</div>
-            <div class="ig">IG: 32 (Bajo)</div>
-          </div>
-        </div>
-
-        <!-- colación 2 -->
-        <div class="demo-menu-item">
-          <div class="menu-icono"><img src="../recursos/imagenes/iconos/arcilla/i-lemon-arcilla.svg" width="20" height="20" alt="Colación"></div>
-          <div class="menu-contenido">
-            <h4>Colación · 5:00 PM</h4>
-            <p>Manzana con mantequilla de almendras (1 cda)</p>
-          </div>
-          <div class="menu-nutricion">
-            <div class="cho">20g CHO</div>
-            <div class="ig">IG: 38 (Bajo)</div>
-          </div>
-        </div>
-
-        <!-- cena -->
-        <div class="demo-menu-item sin-borde">
-          <div class="menu-icono"><img src="../recursos/imagenes/iconos/arcilla/i-moon-arcilla.svg" width="20" height="20" alt="Cena"></div>
-          <div class="menu-contenido">
-            <h4>Cena · 8:00 PM</h4>
-            <p>Salmón al horno con brócoli al vapor y quinoa</p>
-          </div>
-          <div class="menu-nutricion">
-            <div class="cho">30g CHO</div>
-            <div class="ig">IG: 35 (Bajo)</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- resumen nutricional -->
-      <div class="demo-nutricion-total">
-        <div class="nutricion-item">
-          <div class="nutricion-num">142g</div>
-          <div class="nutricion-label">Carbohidratos totales</div>
-        </div>
-        <div class="nutricion-item">
-          <div class="nutricion-num">1,650</div>
-          <div class="nutricion-label">Calorías diarias</div>
-        </div>
-        <div class="nutricion-item">
-          <div class="nutricion-num">35</div>
-          <div class="nutricion-label">Índice glucémico promedio</div>
-        </div>
-      </div>
-
-      <div class="demo-nota">
-        <img src="../recursos/imagenes/iconos/arcilla/i-info-circle-arcilla.svg" width="16" height="16" alt="Info"> Este es un menú de ejemplo. <a href="registro.html">Regístrate gratis</a> para generar tu plan completo de 7 días con recetas, lista de compras y seguimiento de glucosa.
-      </div>
+    <div class="demo-resultado" id="ia-resultado" hidden>
+      <textarea id="ia-texto-menu" class="ia-textarea-menu" rows="18" readonly
+        placeholder="Tu menú personalizado aparecerá aquí..."></textarea>
     </div>
   </div>
 </section>
 
 </details>
+<!-- FIN: Conector + resultado menú IA -->
 
-<!-- gestión nutricional -->
-<section class="gestion-nutricional">
-  <div class="contenedor">
-    <div class="texto-centrado mb-64">
-      <div class="pastilla">Acompañamiento Diario</div>
-      <h2>Gestión nutricional <em>inteligente</em></h2>
-      <p class="parrafo-intro">No solo generamos menús. Te damos las herramientas para acompañarte cada día.</p>
-    </div>
 
-    <div class="contenido-superior">
-      <!-- notas -->
-      <div class="notas">
-        <h2 class="titulo-seccion-gn">Mis Notas</h2>
-        <textarea placeholder="Escribe aquí cómo te sentiste hoy con tu alimentación..."></textarea>
-        <button class="boton boton-primario boton-bloque">Guardar Nota</button>
-      </div>
-
-      <!-- logros -->
-      <div class="logros">
-        <h2 class="titulo-seccion-gn">Logros</h2>
-        <div class="logros__contenido">
-          <div class="barra-progreso">
-            <div class="barra-progreso__relleno"></div>
-          </div>
-          <div class="insignias">
-            <span>7 Días Seguidos</span>
-            <span>Glucosa Estable</span>
-            <span>Menú Cumplido</span>
-          </div>
-        </div>
-        <p class="logros__texto">7 de 10 desafíos completados (70%)</p>
-      </div>
-    </div>
-
-    <!-- desafíos -->
-    <div class="desafios">
-      <h2 class="titulo-seccion-gn">Desafíos Semanales</h2>
-
-      <details class="acordeon">
-        <summary>Bloque 1: Alimentación Inteligente</summary>
-        <div class="acordeon__item">
-          <h4>Semana 1: El reto de la mitad del plato</h4>
-          <p>En el almuerzo y la cena, asegúrate de que la mitad de tu plato esté llena de verduras sin almidón (brócoli, espinaca, lechuga, pepino). ¡Fibra al rescate!</p>
-        </div>
-        <div class="acordeon__item">
-          <h4>Semana 2: Snacks con estrategia</h4>
-          <p>Cambia los snacks ultraprocesados por una opción que combine proteína y grasa saludable, como almendras o apio con hummus.</p>
-        </div>
-        <div class="acordeon__item">
-          <h4>Semana 3: Despídete del azúcar líquido</h4>
-          <p>Reemplaza jugos envasados, gaseosas o cafés azucarados por agua, infusiones frías o agua saborizada naturalmente.</p>
-        </div>
-        <div class="acordeon__item sin-borde">
-          <h4>Semana 4: El orden de los factores sí altera el producto</h4>
-          <p>Consume primero verduras, luego proteínas y grasas saludables, y finalmente carbohidratos para ralentizar la absorción de glucosa.</p>
-        </div>
-      </details>
-
-      <details class="acordeon">
-        <summary>Bloque 2: Movimiento y Actividad Física</summary>
-        <div class="acordeon__item">
-          <h4>Semana 5: La caminata post-comida</h4>
-          <p>Camina entre 10 y 15 minutos después de tu comida principal para ayudar a controlar el pico de glucosa.</p>
-        </div>
-        <div class="acordeon__item">
-          <h4>Semana 6: Rompe el sedentarismo</h4>
-          <p>Levántate cada hora, estírate o camina durante 2 minutos.</p>
-        </div>
-        <div class="acordeon__item sin-borde">
-          <h4>Semana 7: Suma fuerza</h4>
-          <p>Realiza al menos dos sesiones semanales de ejercicios de fuerza utilizando tu propio peso corporal.</p>
-        </div>
-      </details>
-
-      <details class="acordeon">
-        <summary>Bloque 3: Bienestar, Monitoreo y Estilo de Vida</summary>
-        <div class="acordeon__item">
-          <h4>Semana 8: El detective de las etiquetas</h4>
-          <p>Revisa los ingredientes de los productos e identifica azúcares ocultos como jarabe de maíz, maltodextrina o fructosa.</p>
-        </div>
-        <div class="acordeon__item">
-          <h4>Semana 9: El diario de las emociones</h4>
-          <p>Dedica 5 minutos diarios a respirar profundamente o escribir cómo te sientes para gestionar el estrés.</p>
-        </div>
-        <div class="acordeon__item sin-borde">
-          <h4>Semana 10: Higiene del sueño</h4>
-          <p>Duerme entre 7 y 8 horas cada noche y evita las pantallas al menos 30 minutos antes de dormir.</p>
-        </div>
-      </details>
-    </div>
-
-  </div>
-</section>
 
 <section class="seccion-glucosa">
   <div class="contenedor contenedor--900">
@@ -398,20 +223,18 @@
 <section class="demo-cta-claro">
   <div class="contenedor contenedor--600">
     <h2>¿Te gustó lo que <em>viste?</em></h2>
-    <p class="cta-texto">Crea tu cuenta gratuita ahora y obtén tu primer menú semanal completo con recetas, lista de compras y conteo nutricional exacto.</p>
-    <a href="registro.html" class="boton boton-arcilla">Crear cuenta gratis <img src="../recursos/imagenes/iconos/arcilla/i-arrow-right-arcilla.svg" width="16" height="16" alt="→"></a>
+    <p class="cta-texto">Usa la herramienta las veces que quieras. Sin registro, sin costos, sin límites.</p>
+    <a href="../index.html" class="boton boton-arcilla">Volver al inicio <img src="../recursos/imagenes/iconos/arcilla/i-arrow-right-arcilla.svg" width="16" height="16" alt="→"></a>
   </div>
 </section>
 
 <footer class="pie-pagina">
   <div class="contenedor contenedor-pie">
-    <div>© 2025 Vitalis. Salud, con criterio y tecnología.</div>
-    <div class="enlaces-pie">
-      <a href="privacidad.html">Privacidad</a>
-      <a href="terminos.html">Términos</a>
-    </div>
+    <div>© 2026 Vitalis. Salud, con criterio y tecnología.</div>
   </div>
 </footer>
+
+<script src="../recursos/js/demo.js"></script>
 
 </body>
 </html>

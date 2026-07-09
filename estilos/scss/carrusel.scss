@@ -1,0 +1,58 @@
+// Carrusel de imágenes
+.carrusel {
+  overflow: hidden;           // Recorta todo lo que se salga del contenedor
+  aspect-ratio: 3 / 1;        // Relación ancho:alto fija 3:1
+}
+
+// Pista del carrusel — las imágenes se desplazan en fila
+.carrusel__track {
+  display: flex;
+  width: max-content;         // El ancho se ajusta al contenido total duplicado
+  height: 100%;               // Ocupa todo el alto del contenedor padre
+  animation: scroll-carrusel 20s linear infinite;  // Animación continua que desplaza el track
+}
+
+// Cada imagen dentro del carrusel
+.carrusel__track img {
+  height: 100%;               // Se ajusta al alto del track
+  width: 25vw;                // Cada imagen ocupa el 25% del viewport
+  max-width: none;            // Anula el max-width del reset global de img
+  flex-shrink: 0;             // Evita que las imágenes se encojan al redimensionar
+}
+
+// Franja decorativa con texto en movimiento
+.seccion-marquee {
+  padding: 24px 0;
+  background: $color-marquee-fondo;
+  border-top: $borde-sutil;
+  border-bottom: $borde-sutil;
+  overflow: hidden;           // Oculta el texto que sobresale mientras se desplaza
+}
+
+// Texto del marquee — se desplaza horizontalmente sin parar
+.marquee {
+  display: flex;
+  gap: 64px;                  // Separación grande entre cada repetición del texto
+  white-space: nowrap;        // El texto no se parte en varias líneas
+  font-family: $fuente-serif;
+  font-size: 30px;
+  font-style: italic;
+  color: $color-marquee-texto;
+  animation: slide 40s linear infinite;  // Animación lenta de desplazamiento continuo
+}
+
+// Estrella decorativa dentro del marquee
+.estrella {
+  color: $color-arcilla;
+}
+
+// Animación del marquee: desplaza el texto la mitad de su ancho
+@keyframes slide {
+  to { transform: translateX(-50%); }
+}
+
+// Animación del carrusel de imágenes: mismo principio que slide
+@keyframes scroll-carrusel {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}

@@ -1,0 +1,58 @@
+// HERO DE PÁGINA INTERNA — section con imagen de fondo y overlay oscuro
+// Usado en: servicios.html, contacto.html, testimonios.html, glucosa.html
+
+// Capa oscura semitransparente sobre la imagen de fondo
+.pagina-heroe-overlay {
+  position: absolute;           // Se posiciona sobre el section
+  inset: 0;                     // Ocupa todo el espacio (top, right, bottom, left)
+  background: rgba(0, 0, 0, 0.35);  // Negro 35% para oscurecer la imagen
+  z-index: 0;                   // Sobre la imagen, debajo del contenido
+  pointer-events: none;         // No bloquea clicks, pasan al contenido
+}
+
+// Contenedor principal del héroe
+.pagina-heroe {
+  padding: 120px 0 80px;
+  position: relative;            // Crea contexto de posicionamiento para los elementos absolute
+  overflow: hidden;              // Recorta todo lo que sobresalga
+}
+.pagina-heroe p {
+  font-size: 18px;
+  color: $color-tinta-suave;
+  margin-top: 32px;
+  max-width: 700px;             // Limita el ancho del texto para mejor lectura
+}
+
+// Imagen de fondo posicionada detrás de todo
+.pagina-heroe__img {
+  position: absolute;            // Se posiciona sobre el section
+  inset: 0;                     // Ocupa todo el espacio del section
+  width: 100%;
+  height: 100%;
+  object-fit: cover;            // La imagen se recorta para llenar sin deformarse
+  z-index: 0;                     // Capa más baja
+  pointer-events: none;          // No bloquea clicks
+}
+
+// Variante con imagen de fondo: colores claros para contrastar
+.pagina-heroe--con-fondo .contenedor {
+  position: relative;            // Apila el contenido sobre el overlay
+  z-index: 1;                  // Contenido encima del overlay y la imagen
+}
+.pagina-heroe--con-fondo .pastilla {
+  color: $color-blanco;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.pagina-heroe--con-fondo h1 {
+  color: $color-blanco;
+  font-weight: 700;
+  font-size: 60px;
+}
+.pagina-heroe--con-fondo h1 em {
+  color: $color-arcilla;
+}
+.pagina-heroe--con-fondo p {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 700;
+  font-size: 20px;
+}

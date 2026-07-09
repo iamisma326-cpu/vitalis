@@ -10,7 +10,7 @@
 // título de tarjeta (h3)
 @mixin titulo-tarjeta($size: 24px) {
   font-size: $size;
-  color: $color-texto-tarjeta;
+  color: $color-tinta;
   font-weight: 500;
 }
 
@@ -21,11 +21,11 @@
 
 // sombra suave de tarjeta
 @mixin tarjeta-sombra {
-  box-shadow: 0 10px 30px -15px rgba(22, 21, 19, 0.1);
+  box-shadow: $sombra-suave;
 }
 
 // grid responsive (columnas automáticas)
-@mixin grid-reponsive($columnas: 3, $espacio: 32px) {
+@mixin grid-responsive($columnas: 3, $espacio: 32px) {
   display: grid;
   grid-template-columns: repeat($columnas, 1fr);
   gap: $espacio;
@@ -33,7 +33,7 @@
 
 // tarjeta blanca base
 @mixin tarjeta-base($padding: 32px, $radio: $radio-borde-grande, $borde: $borde-tarjeta) {
-  background: $color-crema;
+  background: $color-blanco;
   border: $borde;
   border-radius: $radio;
   padding: $padding;

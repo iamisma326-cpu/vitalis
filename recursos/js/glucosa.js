@@ -48,17 +48,17 @@ function renderizarAlimentos(lista) {
         if (alimento.clasificacion === "medio") badgeClass = "ig-medio";
         if (alimento.clasificacion === "alto") badgeClass = "ig-alto";
 
-        let htmlContenido = `<div class="food-title"><i class="fas fa-leaf"></i> ${alimento.nombre}</div>
+        let htmlContenido = `<div class="food-title"><img src="../recursos/imagenes/iconos/arcilla/i-lemon-arcilla.svg" alt="" class="food-icon"> ${alimento.nombre}</div>
                             <div class="food-category">${alimento.categoria}</div>
                             <span class="ig-badge ${badgeClass}">Índice Glucémico: ${alimento.ig} (${alimento.clasificacion.toUpperCase()})</span>`;
 
         if (alimento.clasificacion === "medio" || alimento.clasificacion === "alto") {
             htmlContenido += `<div class="exchange-box">
-                            <strong><i class="fas fa-lightbulb"></i> Sugerencia de Intercambio:</strong> ${alimento.intercambio}
+                            <strong><img src="../recursos/imagenes/iconos/arcilla/i-info-circle-arcilla.svg" alt="" class="food-icon"> Sugerencia de Intercambio:</strong> ${alimento.intercambio}
                         </div>`;
         } else {
             htmlContenido += `<div class="safe-box">
-                            <strong><i class="fas fa-circle-check"></i> Control Óptimo:</strong> ${alimento.intercambio}
+                            <strong><img src="../recursos/imagenes/iconos/arcilla/i-check-circle-arcilla.svg" alt="" class="food-icon"> Control Óptimo:</strong> ${alimento.intercambio}
                         </div>`;
         }
         card.innerHTML = htmlContenido;
